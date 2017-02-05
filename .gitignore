@@ -1,0 +1,13 @@
+Backup/
+
+WalkThrough/db/
+WalkThrough/incremental_db/
+WalkThrough/output_files/
+WalkThrough/simulation/
+WalkThrough/work
+
+Lab2/db/
+Lab2/incremental_db/
+Lab2/output_files/
+Lab2/simulation/
+Lab2/work
