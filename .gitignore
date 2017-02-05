@@ -1,7 +1,5 @@
 Backup/
 
-db/
-
 WalkThrough/db/
 WalkThrough/incremental_db/
 WalkThrough/output_files/
@@ -13,9 +11,3 @@ Lab2/incremental_db/
 Lab2/output_files/
 Lab2/simulation/
 Lab2/work
-
-sinm/db/
-sinm/incremental_db/
-sinm/output_files/
-sinm/simulation/
-sinm/work
