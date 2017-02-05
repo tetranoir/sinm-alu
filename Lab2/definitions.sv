@@ -9,6 +9,20 @@ package definitions;
     const logic [1:0]kAND  = 2'b10;
     const logic [1:0]kXOR  = 2'b11;
     
+/*	const logic [4:0] opSetdr	=	'b00000;
+
+	const logic [4:0] opAdd		=	'b00001;
+	const logic [4:0] opAddc	=	'b00010;
+	const logic [4:0] opSub		=	'b00011;
+
+	const logic [4:0] opIncr	=	'b00100;
+	const logic [4:0] opDecr	=	'b00101;
+	
+	const logic [4:0] opLoadImm	=	'b00110;
+	const logic [4:0] opLoadReg	=	'b00111;
+	const logic [4:0] opLoadReg	=	'b00111;
+	*/
+
     typedef enum logic[1:0] {
         ADDU    = 2'h0, 
         SUBU    = 2'h1, 

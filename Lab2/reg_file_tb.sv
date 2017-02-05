@@ -35,7 +35,7 @@ module reg_file_tb;
 
 // Instantiate the Unit Under Test (UUT)
 	reg_file #(.W(WT),.D(DT)) uut(
-	  .clk        ,     // .clk(clk),
+	  .clk		(clk)			  ,
 	  .write_en (RegWrite  )  , 
 	  .raddrA   (srcA      )  , 
 	  .raddrB   (srcB      )  , 

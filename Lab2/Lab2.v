@@ -15,34 +15,37 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Thu Feb 02 08:54:36 2017"
+// CREATED		"Sun Feb 05 15:33:57 2017"
 
-module WalkThrough(
-	clock,
-	wenable_i,
-	reset_i,
-	newpc_i,
-	pc_o
+module Lab2(
+	SC_IN,
+	INPUTA,
+	INPUTB,
+	OP,
+	SC_OUT,
+	OUT
 );
 
 
-input wire	clock;
-input wire	wenable_i;
-input wire	reset_i;
-input wire	[7:0] newpc_i;
-output wire	[7:0] pc_o;
+input wire	SC_IN;
+input wire	[7:0] INPUTA;
+input wire	[7:0] INPUTB;
+input wire	[3:0] OP;
+output wire	SC_OUT;
+output wire	[7:0] OUT;
 
 
 
 
 
 
-program_counter	b2v_inst(
-	.clock(clock),
-	.wenable_i(wenable_i),
-	.reset_i(reset_i),
-	.newpc_i(newpc_i),
-	.pc_o(pc_o));
+ALU	b2v_inst(
+	.SC_IN(SC_IN),
+	.INPUTA(INPUTA),
+	.INPUTB(INPUTB),
+	.OP(OP),
+	.SC_OUT(SC_OUT),
+	.OUT(OUT));
 
 
 endmodule

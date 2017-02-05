@@ -28,10 +28,11 @@ module ALU(
   op_mne op_mnemonic;			  // type enum: used for convenient waveform viewing
 	
   always_comb begin
+/*
 // option 1 -- single instruction for both LSW & MSW
 	case(OP[3:2])
 	  kADD : case(OP[1:0])
-	    00: {SC_OUT,INPUTA} << 1;
+	    00: {SC_OUT,INPUTA} <<= 1;
 		01: (INPUTA << 1) + SC_IN;
 	  
 	  {SC_OUT,OUT} = INPUTA + INPUTB + SC_IN;    // universal add operation
@@ -39,6 +40,7 @@ module ALU(
 //	  kXOR : OUT = INPUTA^INPUTB;
 	  default: {SC_OUT,OUT} = 0;
 	endcase
+*/
 // option 2 -- separate LSW and MSW instructions
     case(OP)
 	  kADDL : {SC_OUT,OUT} = INPUTA + INPUTB ;    // universal add operation
@@ -52,12 +54,12 @@ module ALU(
                 SC_OUT = 0;
                end
       kXOR  : OUT = INPUTA ^ INPUTB;
-	  kBRNE : OUT = INPUTA - INPUTB;   // use in conjunction w/ instruction decode 
     endcase
-	case(OUT)
-	  16'b0 :   ZERO = 1'b1;
-	  default : ZERO = 1'b0;
-	endcase
+	// Following comments can be used to set flag for zero if necessary
+	//case(OUT)
+	//  16'b0 :   ZERO = 1'b1;
+	//  default : ZERO = 1'b0;
+	//endcase
 //$display("ALU Out %d \n",OUT);
     op_mnemonic = op_mne'(OP);
   end
