@@ -42,9 +42,9 @@ module ALU(
 	endcase
 */
 // option 2 -- separate LSW and MSW instructions
-    case(OP)
-	  kADDL : {SC_OUT,OUT} = INPUTA + INPUTB ;    // universal add operation
-	  kLSAL : {SC_OUT,OUT} = (INPUTA<<1) ;  	// universal shift instruction
+		case(OP)
+			opSetdr : {SC_OUT,OUT} = INPUTA + INPUTB ;    // universal add operation
+/*	  kLSAL : {SC_OUT,OUT} = (INPUTA<<1) ;  	// universal shift instruction
 	  kADDU : begin
 	            OUT = INPUTA + INPUTB + SC_IN;    // universal add operation
                 SC_OUT = 0;   
@@ -54,7 +54,11 @@ module ALU(
                 SC_OUT = 0;
                end
       kXOR  : OUT = INPUTA ^ INPUTB;
-    endcase
+*/			default : begin
+							OUT = 0;
+							SC_OUT = 0;
+						end
+		endcase
 	// Following comments can be used to set flag for zero if necessary
 	//case(OUT)
 	//  16'b0 :   ZERO = 1'b1;

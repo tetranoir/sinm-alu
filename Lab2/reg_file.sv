@@ -14,19 +14,19 @@
 // Revision 0.01 - File Created
 // Additional Comments: 					  $clog2
 
-module reg_file #(parameter W=8, D=4)(
+module reg_file(
   input           clk,
                   write_en,
-  input  [ D-1:0] raddrA,
+  input  [3:0] raddrA,
                   raddrB,
                   waddr,
-  input  [ W-1:0] data_in,
-  output [ W-1:0] data_outA,
-  output logic [W-1:0] data_outB
+  input  [7:0] data_in,
+  output [7:0] data_outA,
+  output logic [7:0] data_outB
     );
 
 // W bits wide [W-1:0] and 2**4 registers deep or just [64]	 
-logic [W-1:0] registers[2**D];
+logic [7:0] registers[2**4];
 
 // combinational reads w/ blanking of address 0
 assign      data_outA = raddrA? registers[raddrA] : '0;

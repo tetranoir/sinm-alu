@@ -11,3 +11,8 @@ Lab2/incremental_db/
 Lab2/output_files/
 Lab2/simulation/
 Lab2/work
+
+*.bak
+*.bsf
+*.rpt
+*.wlf
