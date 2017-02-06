@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Sun Feb 05 15:57:13 2017"
+// CREATED		"Sun Feb 05 17:24:31 2017"
 
 module Lab2(
 	SC_IN,
@@ -62,6 +62,7 @@ ALU	b2v_inst(
 	.OP(OP),
 	.SC_OUT(SC_OUT),
 	.OUT(OUT));
+
 
 
 reg_file	b2v_inst6(

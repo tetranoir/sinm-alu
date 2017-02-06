@@ -1,9 +1,9 @@
 //This file defines the parameters used in the alu
 package definitions;
-    
+
 // Instruction map
 	const logic [4:0] opSetdr	=	'b00000;
-
+    
 	const logic [4:0] opAdd		=	'b00001;
 	const logic [4:0] opAddc	=	'b00010;
 	const logic [4:0] opSub		=	'b00011;
@@ -48,10 +48,10 @@ package definitions;
 
 	// Not sure what these do. Figure out later.
 	typedef enum logic[1:0] {
-	   ADDU    = 2'h0, 
-	   SUBU    = 2'h1, 
-	   AND     = 2'h2,
-	   XOR     = 2'h3
+	    ADDU    = 2'h0, 
+	    SUBU    = 2'h1, 
+	    AND     = 2'h2,
+	    XOR     = 2'h3
 	} op_mne;
  
 endpackage // defintions
