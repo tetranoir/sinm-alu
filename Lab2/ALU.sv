@@ -1,71 +1,133 @@
-// Engineer: 
-// 
-// Create Date:    2016.10.15
-// Design Name: 
-// Module Name:    ALU 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//   combinational (unclocked) ALU
+import definitions::*;
 
-import definitions::*;			  // includes package "definitions"
-module ALU(
-  input        SC_IN,             // shift in/carry in 
-  input [ 3:0] OP,				  // ALU opcode, part of microcode
-  input [ 7:0] INPUTA,			  // data inputs
-               INPUTB,
-  output logic [7:0] OUT,		  // or:  output reg [7:0] OUT,
-  output logic SC_OUT			  // shift out/carry out
-    );
-	 
-  op_mne op_mnemonic;			  // type enum: used for convenient waveform viewing
+module ALU (
+	input [3:0] REG_NUM, //number of the destination reg
+	input [4:0] OP, //5 bit ALU OP code
+	input [7:0] INPUT_A, // 8 bit destination reg
+					INPUT_B, // 8 bit immediate or whatever
+					INPUT_C, // address base
+	input C_IN, // carry in or flag bit
 	
-  always_comb begin
-/*
-// option 1 -- single instruction for both LSW & MSW
-	case(OP[3:2])
-	  kADD : case(OP[1:0])
-	    00: {SC_OUT,INPUTA} <<= 1;
-		01: (INPUTA << 1) + SC_IN;
-	  
-	  {SC_OUT,OUT} = INPUTA + INPUTB + SC_IN;    // universal add operation
-	  kLSA : {SC_OUT,OUT} = (INPUTA<<1) + SC_IN;  	// universal shift instruction
-//	  kXOR : OUT = INPUTA^INPUTB;
-	  default: {SC_OUT,OUT} = 0;
+	output[7:0] OUT, //8 bit output 
+	output FLAG_OUT, //if we need to set the flag
+	
+	output REG_NUM_OUT
+	
+	
+);
+
+reg temp; //used for rotational
+
+always_comb begin
+	REG_NUM_OUT = REG_NUM;
+	OUT = 0;
+	FLAG_OUT = C_IN;
+	
+
+	case(OP)
+		opAdd: {FLAG_OUT, OUT} = INPUT_A + INPUT_B; //any overflow get stored in flagout
+		opAddc:  {FLAG_OUT, OUT} = INPUT_A + INPUT_B + C_IN;
+		opSub: OUT = INPUT_A - INPUT_B;
+		
+		opIncr: {FLAG_OUT, OUT} = INPUT_B + 8'h01;
+		opDecr: OUT = INPUT_B - 8'h01;
+		
+		opLoadImm: OUT = (INPUT_C << 4) + INPUT_B[3:0];
+		opLoadReg: OUT = INPUT_B;
+		
+		opStoreImm: OUT = (INPUT_C << 4) + INPUT_B[3:0];
+		opStoreReg: OUT = INPUT_B;
+		
+		opMovImm: OUT = INPUT_A[3:0];
+		opMovReg: OUT = INPUT_A;
+		
+		opClr: {FLAG_OUT, OUT} = 0;
+		
+		opShl: {FLAG_OUT, OUT} = INPUT_A << INPUT_B[3:0];
+		opShr: OUT = INPUT_A >> INPUT_B[3:0];
+		opSar: OUT = $signed(INPUT_A) >>> INPUT_B[3:0];
+			   
+		
+		//REDO ASDFKJASDF
+		opRcr: begin OUT = {C_IN, INPUT_A, temp} >> 1;
+					FLAG_OUT = temp;
+				 end
+				 
+				 
+		opRcl: begin OUT = {temp,INPUT_A, C_IN} << 1;
+					FLAG_OUT = temp;
+				 end
+		
+		opAnd: OUT = INPUT_A & INPUT_B;
+		opXor: OUT = INPUT_A ^ INPUT_B;
+		
+		opCmpImm:
+			if(INPUT_A == INPUT_B) begin
+				FLAG_OUT = 1;
+			end else begin
+				FLAG_OUT = 0;
+			end
+		opCmpReg:
+			if(INPUT_A == INPUT_B[3:0]) begin
+				FLAG_OUT = 1;
+			end else begin
+				FLAG_OUT = 0;
+			end
+		
+		opJmp: OUT = (INPUT_C << 4) + INPUT_B[3:0];
+		opJz:
+			if(INPUT_A == 0) begin
+				OUT = (INPUT_C << 4) + INPUT_B[3:0];
+			end else begin 
+				OUT = 0;
+			end
+		opJfnz:
+			if(C_IN != 0) begin
+				OUT = (INPUT_C << 4) + INPUT_B[3:0];
+			end else begin 
+				OUT = 0;
+			end
+		opJnz:
+			if(INPUT_A != 0) begin
+				OUT = (INPUT_C << 4) + INPUT_B[3:0];
+			end else begin 
+				OUT = 0;
+			end
+		
+		opClfb: if(((INPUT_A ^ INPUT_B)& 8'h0F) == 0) begin
+						FLAG_OUT = 0;
+					end else begin 
+						FLAG_OUT = 1; 
+					end
+		opMax:
+			if(INPUT_A >= INPUT_B) begin
+				OUT = INPUT_A;
+			end else begin 
+				OUT = INPUT_B; 
+			end
+		
+	
+		opCkfr:
+			if((INPUT_A | INPUT_B) == 0) begin
+				FLAG_OUT = 0;
+			end else begin
+				FLAG_OUT = 1;
+			end
+			
+		
+	
 	endcase
-*/
-// option 2 -- separate LSW and MSW instructions
-		case(OP)
-			opSetdr : {SC_OUT,OUT} = INPUTA + INPUTB ;    // universal add operation
-/*	  kLSAL : {SC_OUT,OUT} = (INPUTA<<1) ;  	// universal shift instruction
-	  kADDU : begin
-	            OUT = INPUTA + INPUTB + SC_IN;    // universal add operation
-                SC_OUT = 0;   
-              end
-	  kLSAU : begin
-	            OUT = (INPUTA<<1) + SC_IN;  	// universal shift instruction
-                SC_OUT = 0;
-               end
-      kXOR  : OUT = INPUTA ^ INPUTB;
-*/			default : begin
-							OUT = 0;
-							SC_OUT = 0;
-						end
-		endcase
-	// Following comments can be used to set flag for zero if necessary
-	//case(OUT)
-	//  16'b0 :   ZERO = 1'b1;
-	//  default : ZERO = 1'b0;
-	//endcase
-//$display("ALU Out %d \n",OUT);
-    op_mnemonic = op_mne'(OP);
-  end
+	
+	
+
+
+
+
+
+
+
+end //end always_comb
+
+
 
 endmodule
