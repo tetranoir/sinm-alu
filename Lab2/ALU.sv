@@ -1,5 +1,7 @@
 import definitions::*;
 
+
+
 module ALU (
 	input [3:0] REG_NUM, //number of the destination reg
 	input [4:0] OP, //5 bit ALU OP code
@@ -8,10 +10,10 @@ module ALU (
 					INPUT_C, // address base
 	input C_IN, // carry in or flag bit
 	
-	output[7:0] OUT, //8 bit output 
-	output FLAG_OUT, //if we need to set the flag
+	output logic[7:0] OUT, //8 bit output 
+	output logic FLAG_OUT, //if we need to set the flag
 	
-	output REG_NUM_OUT
+	output logic REG_NUM_OUT
 	
 	
 );
@@ -25,6 +27,7 @@ always_comb begin
 	
 
 	case(OP)
+		opSetdr: REG_NUM_OUT = INPUT_B;
 		opAdd: {FLAG_OUT, OUT} = INPUT_A + INPUT_B; //any overflow get stored in flagout
 		opAddc:  {FLAG_OUT, OUT} = INPUT_A + INPUT_B + C_IN;
 		opSub: OUT = INPUT_A - INPUT_B;
