@@ -13,12 +13,12 @@ module ALU (
 	output logic[7:0] OUT, //8 bit output 
 	output logic FLAG_OUT, //if we need to set the flag
 	
-	output logic REG_NUM_OUT
+	output logic [3:0]REG_NUM_OUT
 	
 	
 );
 
-reg temp; //used for rotational
+
 
 always_comb begin
 	REG_NUM_OUT = REG_NUM;
@@ -52,13 +52,15 @@ always_comb begin
 			   
 		
 		//REDO ASDFKJASDF
-		opRcr: begin OUT = {C_IN, INPUT_A, temp} >> 1;
-					FLAG_OUT = temp;
+		opRcr: begin 
+					FLAG_OUT = INPUT_A[0];
+					OUT = ({C_IN, INPUT_A[7:1]});
 				 end
 				 
 				 
-		opRcl: begin OUT = {temp,INPUT_A, C_IN} << 1;
-					FLAG_OUT = temp;
+		opRcl: begin 
+					FLAG_OUT = INPUT_A[7];
+					OUT = ({INPUT_A[6:0], C_IN});
 				 end
 		
 		opAnd: OUT = INPUT_A & INPUT_B;
@@ -71,7 +73,7 @@ always_comb begin
 				FLAG_OUT = 0;
 			end
 		opCmpReg:
-			if(INPUT_A == INPUT_B[3:0]) begin
+			if(INPUT_A == INPUT_B) begin
 				FLAG_OUT = 1;
 			end else begin
 				FLAG_OUT = 0;
