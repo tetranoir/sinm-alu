@@ -108,9 +108,9 @@ module reg_file_tb;
         alert = 0;
         
         
-        full_instr = 9'h061;    // load 1
+        full_instr = 9'h06f;    // load 15
         #10ns;
-        if (data_outAddrBase != 8'h42 || data_outB != 8'h01)
+        if (data_outAddrBase != 8'h42 || data_outB != 8'h0f)
             alert = 1;
         #10ns;
         alert = 0;
@@ -166,14 +166,14 @@ module reg_file_tb;
         #10ns;
         alert = 0;
         
-        full_instr = 9'h0e3;    // shr 7
+        full_instr = 9'h0e3;    // shr 3
         #10ns;
         if (data_outA != 8'h4f || data_outB != 8'h03 || dr_code != 4'h0)
             alert = 1;
         #10ns;
         alert = 0;
         
-        full_instr = 9'h0f1;    // sar 7
+        full_instr = 9'h0f1;    // sar 1
         #10ns;
         if (data_outA != 8'h4f || data_outB != 8'h01 || dr_code != 4'h0)
             alert = 1;
@@ -275,17 +275,33 @@ module reg_file_tb;
         uut.registers[6] = 8'b00000100;   // Change r6 value
         uut.registers[7] = 8'b11001010;   // Change r7 value
         
-        full_instr = 9'h1fe;    // ckfr
+        full_instr = 9'h1e0;    // ckfr
         #10ns;
         if (data_outA != 8'b11011110 || data_outB != 8'b11001110)
             alert = 1;
         #10ns;
         alert = 0;
         
-        full_instr = 9'h1ff;    // max r0
+        full_instr = 9'h1f0;    // halt r0
         #10ns;
         if (data_outA != 8'h00 || data_outB != 8'h00 ||
             data_outAddrBase != 8'h00 || dr_code != 4'h0)
+            alert = 1;
+        #10ns;
+        alert = 0;
+        
+        
+        // Write before read test
+        uut.registers[0] = 8'h08;
+        uut.registers[rn_dr] = 8'h00;
+        #20ns;
+        
+        write_en = 1;
+        waddr = 4'h0;
+        data_in = 8'h22;
+        full_instr = 9'h0d0;    // shl r0
+        #10ns;
+        if (data_outA != 8'h22)
             alert = 1;
         #10ns;
         alert = 0;
@@ -293,8 +309,10 @@ module reg_file_tb;
     
     // Simulate clock
     always begin
-        #10ns clk = 1;
-        #10ns clk = 0;
+        clk = 1;
+        #10ns;
+        clk = 0;
+        #10ns;
     end      
 endmodule
 

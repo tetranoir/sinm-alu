@@ -30,28 +30,42 @@ module reg_file(
 
 logic [7:0] registers[2**4];
 
-// sequential (clocked) writes
+// Reg file writing.
 always_ff @ (posedge clk)
   if (write_en)
     registers[waddr] <= data_in;
 
 always_comb begin
+    // There are four output lines for the reg file,
+    // data_outA    : the data from the register indicated by r12.
+    // data_outB    : either the data from register indicated by lower 4 bits
+    //                of the instruction (R instructions), or the raw value
+    //                of the lower 4 bits of the instruction (I instructions)
+    // data_outAddrBase : Should a jump or a memory R/W instruction is decoded,
+    //                    the value of r14 or r13, correspondingly, will go to
+    //                    this line.
+    // dr_code      : the code indicating which register to write back. Default
+    //                to the register indicated by r12.
     data_outA   = registers[registers[rn_dr]];
     data_outB   = oprnd;
     data_outAddrBase = 0;
-    dr_code     = registers[rn_dr];
+    dr_code     = registers[rn_dr][3:0];
     case(instr)
+        // I instruction, ask to write back to r12
         opSetdr : begin
             dr_code = rn_dr;
         end
         
+        // R instructions
         opAdd, opAddc, opSub    : data_outB = registers[oprnd];
         
+        // R instructions, write back to source.
         opIncr, opDecr  : begin
             data_outB = registers[oprnd];
             dr_code = oprnd;
         end
         
+        // I instructions, memory ops.
         opLoadImm, opStoreImm   : begin
             data_outB = oprnd;
             data_outAddrBase = registers[rn_addrbase];
@@ -59,7 +73,8 @@ always_comb begin
         opLoadReg, opStoreReg   : begin
             data_outB = registers[oprnd];
         end
- 
+
+        // Move instructions, two versions.
         opMovImm    : begin
             data_outB = oprnd;
         end
@@ -67,12 +82,14 @@ always_comb begin
             data_outB = registers[oprnd];
         end
         
+        // Clear done by ALU, write back to source
         opClr   : begin
             dr_code = oprnd;
         end
         
         // opShl, opShr, opSar goes to default
         
+        // R instructions, write back to source
         opRcr, opRcl    : begin
             data_outB = registers[oprnd];
             dr_code = oprnd;
@@ -83,6 +100,7 @@ always_comb begin
         opCmpImm    : data_outB = oprnd;
         opCmpReg    : data_outB = registers[oprnd];
         
+        // I instructions, jump ops.
         opJmp, opJz, opJfnz, opJnz  : begin
             data_outB = oprnd;
             data_outAddrBase = registers[rn_jumpbase];
@@ -92,19 +110,17 @@ always_comb begin
             data_outB = registers[oprnd];
         end
         
-        'b11111 : begin
-            case({instr, oprnd})
-                opCkfr  : begin
-                    data_outA = registers[4] | registers[5];
-                    data_outB = registers[6] | registers[7];
-                end
-                default : begin
-                    data_outA = 0;
-                    data_outB = 0;
-                    data_outAddrBase = 0;
-                    dr_code = 0;
-                end
-            endcase
+        opCkfr  : begin
+            data_outA = registers[4] | registers[5];
+            data_outB = registers[6] | registers[7];
+        end
+        // HALT. Clear all lines. For now we don't have a halt signal
+        // register but we will.
+        opHalt  : begin
+            data_outA = 0;
+            data_outB = 0;
+            data_outAddrBase = 0;
+            dr_code = 0;
         end
         
         default : begin
