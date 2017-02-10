@@ -11,8 +11,11 @@ Lab2/incremental_db/
 Lab2/output_files/
 Lab2/simulation/
 Lab2/work
+Lab2/ALU.bdf
+Lab2/Lab2.bsf
 
 *.bak
 *.bsf
 *.rpt
 *.wlf
+*.bdf
