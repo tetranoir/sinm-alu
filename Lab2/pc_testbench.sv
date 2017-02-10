@@ -15,18 +15,19 @@ initial begin
 	branch = 0;
 	taken = 0;
 	rel_jmp = 0;
-	pc_in = 0;
+	pc_in = 2;
 	
 	#10 start = 1; // sets pc to 0
-	#10 start = 0;
-	#10	// pc = 1
-	#10	// pc = 2
-	#10 	// pc = 3
-	#10   // pc = 4
-	#10 branch = 1; taken = 1; rel_jmp = 2; // pc = 2
-	#10	// pc = 3 
-	#10 start = 1;
-	#10 start = 0; 
+	#10 start = 0; pc_in = pc_out;
+	#10 pc_in = pc_out;
+	#10 pc_in = pc_out;
+	#10 pc_in = pc_out;
+	#10 branch = 1; taken = 1; rel_jmp = 2; pc_in = pc_out;
+	#10 pc_in = pc_out;
+	#10 start = 1; pc_in = pc_out;
+	#10 start = 0; pc_in = pc_out;
+	#10 pc_in = pc_out;
+	#10 pc_in = pc_out;
 	
 end
 
