@@ -21,7 +21,7 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 264 160)
+	(rect 16 16 288 160)
 	(text "ALU" (rect 5 0 26 12)(font "Arial" ))
 	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
@@ -67,27 +67,27 @@ agreement for further details.
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
-		(pt 248 32)
+		(pt 272 32)
 		(output)
 		(text "OUT[7..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "OUT[7..0]" (rect 187 27 227 39)(font "Arial" ))
-		(line (pt 248 32)(pt 232 32)(line_width 3))
+		(text "OUT[7..0]" (rect 211 27 251 39)(font "Arial" ))
+		(line (pt 272 32)(pt 256 32)(line_width 3))
 	)
 	(port
-		(pt 248 48)
+		(pt 272 48)
 		(output)
 		(text "FLAG_OUT" (rect 0 0 53 12)(font "Arial" ))
-		(text "FLAG_OUT" (rect 174 43 227 55)(font "Arial" ))
-		(line (pt 248 48)(pt 232 48)(line_width 1))
+		(text "FLAG_OUT" (rect 198 43 251 55)(font "Arial" ))
+		(line (pt 272 48)(pt 256 48)(line_width 1))
 	)
 	(port
-		(pt 248 64)
+		(pt 272 64)
 		(output)
-		(text "REG_NUM_OUT" (rect 0 0 76 12)(font "Arial" ))
-		(text "REG_NUM_OUT" (rect 151 59 227 71)(font "Arial" ))
-		(line (pt 248 64)(pt 232 64)(line_width 1))
+		(text "REG_NUM_OUT[3..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "REG_NUM_OUT[3..0]" (rect 155 59 251 71)(font "Arial" ))
+		(line (pt 272 64)(pt 256 64)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 232 128)(line_width 1))
+		(rectangle (rect 16 16 256 128)(line_width 1))
 	)
 )
