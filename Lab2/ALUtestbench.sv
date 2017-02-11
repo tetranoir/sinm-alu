@@ -21,16 +21,20 @@ wire [3:0]REG_NUM_OUT;
 
 initial begin
 
+	
 	//set destination register
-	#10
 	OP = opSetdr;
-	#10
 	REG_NUM = 4'hD;
+	#10
+	INPUT_B = 10;
 
+	
+
+	#10
 	//test adding
 	
 	OP = opAdd;
-	#10
+
 	INPUT_A = 8'd200;
 	INPUT_B = 8'd75;
 	INPUT_C = 8'd4; //shouldn't matter
@@ -49,9 +53,9 @@ initial begin
 	
 	
 	//add with carry
-
-	OP = opAddc;
 	#10
+	OP = opAddc;
+	
 	INPUT_A = 3;
 	INPUT_B = 10;
 	INPUT_C = 1;
@@ -62,7 +66,7 @@ initial begin
 	//subtract
 	
 	OP = opSub;
-	#10
+
 	
 	INPUT_A = 3;
 	INPUT_B = 10;
@@ -78,16 +82,15 @@ initial begin
 
 	
 	//test incr
-	
+	#10	
 	OP = opIncr;
-	#10
+
 	INPUT_B = 2;
 
 	#10
 	//decr
 	
 	OP = opDecr;
-	#10
 	INPUT_B = 10;
 	
 	#10
@@ -96,8 +99,6 @@ initial begin
 	//load immediate
 	#10
 	OP = opLoadImm;
-	#10
-
 	INPUT_B = 8'b00111010;
 	INPUT_C = 8'b11111011;
 	
@@ -106,34 +107,29 @@ initial begin
 	//load register
 	
 	OP = opLoadReg;
-	#10
 	INPUT_B = 234;
 	
 	#10
 	//store immediate
 	
 	OP = opStoreImm;
-	#10
 	INPUT_B = 8'b00111110;
 	INPUT_C = 8'b10110010;
 
 	//store register
 	#10
 	OP = opStoreReg;
-	#10
 	INPUT_B = 10;
 
 	//move immediate
 	#10
 	OP = opMovImm;
-	#10
 	INPUT_A = 8'b11111011;
 
 	
 	#10
 	//move register
 	OP = opMovReg;
-	#10
 	INPUT_A = 36;
 	
 	
@@ -147,7 +143,6 @@ initial begin
 	//shift left
 	#10
 	OP = opShl;
-	#10
 	INPUT_A = 8'b00111001;
 	INPUT_B = 2;
 
@@ -158,14 +153,12 @@ initial begin
 	//shift right
 	#10
 	OP = opShr;
-	#10
 	INPUT_B = 4;
 
 	
 	//shift right arithmetic
 	#10
 	OP = opSar;
-	#10
 	INPUT_A = 200;
 	INPUT_B = 2;
 	
@@ -177,7 +170,7 @@ initial begin
 	//rotate circular right
 	#10
 	OP = opRcr;
-	#10
+
 	INPUT_A = 8'b01010101;
 	C_IN = 1;
 	
@@ -187,7 +180,6 @@ initial begin
 	//rotate circular left
 	#10
 	OP = opRcl;
-	#10
 	C_IN = 1;
 	
 	#10
@@ -197,7 +189,6 @@ initial begin
 	//AND
 	#10
 	OP = opAnd;
-	#10
 	INPUT_A = 8'b00110001;
 	INPUT_B = 8'b11001111;
 
@@ -205,14 +196,12 @@ initial begin
 	//XOR
 	#10
 	OP = opXor;
-	#10
 
 	
 	
 	//compare immediate
 	#10
 	OP = opCmpImm;
-	#10
 	INPUT_A = 3;
 	INPUT_B = 3;
 	
@@ -223,7 +212,7 @@ initial begin
 	//compare register
 	#10
 	OP = opCmpReg;
-	#10
+
 	INPUT_A = 8'b00011100;
 	INPUT_B = 8'b00011100;
 	
@@ -234,7 +223,6 @@ initial begin
 	//jump
 	#10
 	OP = opJmp;
-	#10
 	INPUT_C = 8'b00000010;
 
 	
@@ -265,9 +253,9 @@ initial begin
 	#10
 	INPUT_A = 9;
 	
-	//clear flag bit
+	//compare last for bits
 	#10
-	OP = opJmp;
+	OP = opClfb;
 	#10
 	INPUT_A = 8'b00000000;
 	INPUT_B = 8'b11110000;

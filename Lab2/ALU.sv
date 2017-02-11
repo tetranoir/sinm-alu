@@ -27,7 +27,7 @@ always_comb begin
 	
 
 	case(OP)
-		opSetdr: REG_NUM_OUT = INPUT_B;
+		opSetdr: REG_NUM_OUT = INPUT_B[3:0];
 		opAdd: {FLAG_OUT, OUT} = INPUT_A + INPUT_B; //any overflow get stored in flagout
 		opAddc:  {FLAG_OUT, OUT} = INPUT_A + INPUT_B + C_IN;
 		opSub: OUT = INPUT_A - INPUT_B;
