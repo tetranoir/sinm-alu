@@ -44,35 +44,11 @@ two_ver_op_list = ["load", "store", "mov", "cmp"]
 # and have jump value dynamically generated during conversion.
 jump_op_list = ["jmp", "jz", "jfnz", "jnz"]
 
-'''
-invalid_op: Generates an error message for invalid operation
-
-input:  opStr: string, the operation in question
-        lineNum: the line the operation shows up
-output: string, an error message
-'''
-def invalid_op(op, lineNum):
-    return "The operator {0:s} at line {1:d} is invalid".format(op, lineNum)
-
-'''
-invalid_oprand: Generates an error message for invalid operand
-
-input:  oprand: string, the operand in question
-        lineNum: the line the operand shows up
-output: string, an error message
-'''
-def invalid_oprand(oprand, lineNum):
-    return "The operand {0:s} at line {1:d} is invalid".format(oprand, lineNum)
-
-'''
-duplicate_label: Generates an error message for duplicate label
-
-input:  label: string, the label in question
-        lineNum: the line the dup label shows up
-output: string, an error message
-'''
-def duplicate_label(label, lineNum):
-    return "The label {0:s} at line {1:d} is duplicate".format(label, lineNum)
+open_file_error_template = "The file {0:s} cannot be opened"
+invalid_op_template = "The operator {0:s} at line {1:d} is invalid"
+invalid_oprand_template = "The operand {0:s} at line {1:d} is invalid"
+duplicate_label_template = "The label {0:s} at line {1:d} is duplicate"
+undefined_label_template = "Label {0:s} is undefined"
 
 '''
 try_operand_value:  Try to interpret an operand's number part. Returns None if
@@ -111,7 +87,11 @@ def parse_assembly(fileName):
     errorList = []
     opList = []
     labelDict = {}
-    f = open(fileName, "r")
+    try:
+        f = open(fileName, "r")
+    except IOError:
+        f.close()
+        return [],[],[open_file_error_template.format(fileName)]
 
     lineNum = 1 # Line number as in the assembly file
     for line in f:
@@ -120,11 +100,11 @@ def parse_assembly(fileName):
             if (tokens[0])[0] != '#' and (tokens[0])[0:2] != '//': # If not comment
                 if tokens[0] not in opcode_dict:    # If the first word is not an instruction
                     if (tokens[0])[-1] != ':':      # and not a label
-                        errorList.append(invalid_op(tokens[0], lineNum)) # ERROR!!!!
+                        errorList.append(invalid_op_template.format(tokens[0], lineNum)) # Add error
                     else:       # Label
                         label = (tokens[0])[:-1]
                         if label in labelDict:  # Check for duplicate label
-                            errorList.append(duplicate_label(label, lineNum))
+                            errorList.append(duplicate_label_template.format(label, lineNum))
                         else:
                             # Add the label to the dictionary
                             labelDict[label] = len(opList) # length of opList = the mem loc of next instr
@@ -141,11 +121,14 @@ def parse_assembly(fileName):
                         operand = (tokens[1])
                         if operand[0] == 'r':       # If the operand is a register,
                             operand = operand[1:]   # take out the 'r' before testing.
-                        if try_operand_value(operand) is None:  # Error for NaN.
-                            errorList.append(invalid_oprand(tokens[1], lineNum))
+                        val = try_operand_value(operand)
+                        if val is None or (val < 0 or val > 15): # Error for NaN or out of range number.
+                            errorList.append(invalid_oprand_template.format(tokens[1], lineNum))
                         else:                       # Store the (operator, operand) pair.
                             opList.append((tokens[0], tokens[1]))
         lineNum += 1    # Keep up the line number counter.
+
+    f.close()
     return opList, labelDict, errorList
 
 '''
@@ -162,10 +145,62 @@ output: ([string], [string]), a tuple:
             asm code.
         The second entry of the tuple is a list of errors messages. If no error was
             encountered, the list will be empty. The following are possible errors:
-                ???
+                1. Undefined label. You could be more careful dude.
 '''
 def convert_to_mcode(opList, labelDict):
-    return [], [] #TODO
+    mcodeList = []
+    errorList = []
+    codeIndex = 0
+    for (operator, operand) in opList:
+        opcode = opcode_dict[operator]
+        oprval = "0000"
+        # For a two version operation, the 5th bit determines whether it takes imm4
+        # or reg, thus this bit will be set as part of operand.
+        if operator in two_ver_op_list:
+            if operand[0] == 'r':   # reg operand
+                oprval = "1" + binary_repr(int(operand[1:]), 4)
+            # Translate "ph" for place holder value in expanded jump to 00000.
+            # To be changed when the next line jump statement is processed
+            elif operand == 'ph':
+                oprval = "00000"
+            else:                   # imm4 operand
+                oprval = "0" + binary_repr(int(operand), 4)
+        # For jump, we need to rewrite the placeholder imm4 for prev line of mov.
+        elif operator in jump_op_list:
+            # Check for undefined label.
+            if operand not in labelDict:
+                errorList.append(undefined_label_template.format(operand))
+            else:
+                # Calculate the jump distance as 8-bit binary
+                jumpDist = binary_repr(labelDict[operand] - codeIndex, 8)
+
+                # Change the operand for the mov on prev line. It should be
+                # an imm4. Rewrite the generated comment, too
+                mcodeList[-1] = "{0:s}{1:s}{2:s}{1:s}_bin\n".format(
+                    mcodeList[-1][:5], jumpDist[:4], mcodeList[-1][9:-3])
+
+                oprval = jumpDist[4:8]
+        # For no operand instruction, use "" for oprval to conform with the line
+        # component combining logic
+        elif operator in no_oprand_op_list:
+            oprval = ""
+        # Generate either imm4 or 4 bit register code. Notice we don't append a "0"
+        # or an "1" because this is not a two-version op
+        else:
+            if operand[0] == 'r':
+                oprval = binary_repr(int(operand[1:]), 4)
+            else:
+                oprval = binary_repr(int(operand), 4)
+
+        # Generate comment
+        comment = "// {0:s} {1:s}\n".format(operator, operand)
+
+        if len(errorList) == 0:
+            # Add current line to mcodeList
+            mcodeList.append("{0:s}{1:s} {2:s}".format(opcode, oprval, comment))
+        codeIndex += 1
+
+    return mcodeList, errorList
 
 '''
 main: Well, main.
@@ -181,7 +216,7 @@ def main(argv=None):
     if argv is None:
         argv = sys.argv
     if len(argv) != 2:          # Execution command is strictly 'python assembler.py filename'
-        print ("=====================================")
+        print ("================ERROR================")
         print ("The assembler requires passing the file name of the assembly code " +
                "to be assembled.")
         print ("=====================================")
@@ -189,9 +224,15 @@ def main(argv=None):
 
     # Parse the assembly file
     opList, labelDict, errorList = parse_assembly(argv[1])
+    '''
+    for op in opList:
+        print(op)
+    for l in labelDict:
+        print(l, labelDict[l])
+    '''
     # Any error prevents further processing.
     if len(errorList) > 0:
-        print ("=====================================")
+        print ("================ERROR================")
         for err in errorList:
             print (err)
         print ("=====================================")
@@ -200,13 +241,36 @@ def main(argv=None):
     mcodeList, errorList = convert_to_mcode(opList, labelDict)
     # Any error prevents further processing.
     if len(errorList) > 0:
-        print ("=====================================")
+        print ("================ERROR================")
         for err in errorList:
             print (err)
         print ("=====================================")
         return 3
+    '''
+    for mcode in mcodeList:
+        print(mcode)
+    '''
+    dotpos = argv[1].find('.')
+    filename = argv[1]
+    if dotpos != -1:
+        filename = filename[:dotpos]
+    try:
+        outf = open(filename + "_mcode.txt", "w")
+    except IOError:
+        print ("================ERROR================")
+        print (open_file_error_template.format(filename))
+        print ("=====================================")
+        return 4
 
-    # Output machine code
+    for line in mcodeList:
+        try:
+            outf.write(line)
+        except IOError:
+            print ("================ERROR================")
+            print (open_file_error_template.format(filename))
+            print ("=====================================")
+            return 4
+    outf.close()
     return 0
 
 if __name__ == "__main__":
