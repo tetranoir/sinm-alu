@@ -136,13 +136,13 @@ def parse_assembly(fileName):
                         opList.append(("setdr", "r14")) # Set r_dr to point to r_jump_base
                         opList.append(("mov", "ph"))    # Mov a val to r_jump_base. The val will be determined
                                                         # during conversion.
-                        opList.append((token[0], token[1])) # Put in the original jump
+                        opList.append((tokens[0], tokens[1])) # Put in the original jump
                     else:                               # General instruction
-                        operand = (token[1])
+                        operand = (tokens[1])
                         if operand[0] == 'r':       # If the operand is a register,
                             operand = operand[1:]   # take out the 'r' before testing.
                         if try_operand_value(operand) is None:  # Error for NaN.
-                            errorList.append(invalid_oprand(token[1], lineNum))
+                            errorList.append(invalid_oprand(tokens[1], lineNum))
                         else:                       # Store the (operator, operand) pair.
                             opList.append((tokens[0], tokens[1]))
         lineNum += 1    # Keep up the line number counter.
@@ -165,7 +165,7 @@ output: ([string], [string]), a tuple:
                 ???
 '''
 def convert_to_mcode(opList, labelDict):
-    pass #TODO
+    return [], [] #TODO
 
 '''
 main: Well, main.
