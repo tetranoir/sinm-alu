@@ -27,7 +27,7 @@ pc_exam ProgramCounter(
 	.start(start),
 	.branch(branch_en),
 	.taken(taken),
-	.rel_jump(dataC), //TODO change?
+	.rel_jump(Data), //TODO change?
 	.pc_in(PC),
 	.pc_out(InstrAddr)
 );
