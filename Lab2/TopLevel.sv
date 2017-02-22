@@ -4,7 +4,7 @@
 // partial only
 module TopLevel(
     input     start,
-	input     CLK,
+	 input     CLK,
     output    halt
     );
 
