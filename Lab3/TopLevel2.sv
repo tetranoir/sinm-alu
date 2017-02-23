@@ -28,7 +28,7 @@ pc_exam ProgramCounter1(
 	.start(start),
 	.branch(branch_en),
 	.taken(taken),
-	.rel_jmp(ALUData), //TODO change?
+	.rel_jmp(ALUData),
 	.pc_in(PC),
 	.pc_out(InstrAddr)
 );
@@ -50,10 +50,12 @@ reg_file REG_FILE1(
   .data_outA(dataA),
   .data_outB(dataB),
   .data_outAddrBase(dataC),
-  .dr_code(destRegALUin)
+  .dr_code(destRegALUin),
+  .halt(halt)
 );
 
 //alu
+// TODO: Add the port for flag enable and register write enable
 ALU ALU1(
 	.REG_NUM(destRegALUin), //number of the destination reg
 	.OP(Instruction[8:4]), //5 bit ALU OP code
@@ -80,7 +82,7 @@ dataMem memory1(
 	.WriteMem(mem_write),
 	.DataAddr(memAddr),
 	.DataIn(ALUData),
-	.DataOut(MemData) //TODO does this need to be different?
+	.DataOut(MemData)
 );
 
 busmux #(.WIDTH(8), .LPM_WIDTHS(1)) reginMux(
@@ -92,9 +94,10 @@ busmux #(.WIDTH(8), .LPM_WIDTHS(1)) reginMux(
 
 lpm_ff #(.LPM_AVALUE(0), .LPM_WIDTH(1)) flagReg(
     .sload(1),
+    .enable(1), // TODO: Connect it to the ALU flag enable wire.
     .clock(CLK),
     .data(flagIn),
-    .q(flagOut),
+    .q(flagOut)
 );
 
 

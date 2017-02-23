@@ -25,7 +25,8 @@ module reg_file(
   output logic [7:0] data_outA,
   output logic [7:0] data_outB,
   output logic [7:0] data_outAddrBase,
-  output logic [3:0] dr_code
+  output logic [3:0] dr_code,
+  output logic halt
     );
 
 logic [7:0] registers[2**4];
@@ -50,6 +51,7 @@ always_comb begin
     data_outB   = oprnd;
     data_outAddrBase = 0;
     dr_code     = registers[rn_dr][3:0];
+    halt = 0;
     case(instr)
         // I instruction, ask to write back to r12
         opSetdr : begin
@@ -117,10 +119,7 @@ always_comb begin
         // HALT. Clear all lines. For now we don't have a halt signal
         // register but we will.
         opHalt  : begin
-            data_outA = 0;
-            data_outB = 0;
-            data_outAddrBase = 0;
-            dr_code = 0;
+            halt = 1;
         end
         
         default : begin
