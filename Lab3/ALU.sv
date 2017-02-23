@@ -12,7 +12,7 @@ module ALU (
 	
 	output logic[7:0] OUT, //8 bit output 
     output logic[7:0] OUT_ADDR, //8 bit address for mem unit
-	output logic FLAG_OUT, //if we need to set the flag
+	output reg FLAG_OUT, //if we need to set the flag
     output logic TO_WRITE_MEM,
     output logic TO_READ_MEM, // bit signal for mem and data sel mux
 	

@@ -20,17 +20,15 @@ wire[7:0] Data, ALUData, MemData; //data to write to the reg file
 wire[7:0] memAddr;
 wire[7:0] dataA, dataB, dataC;
 
-reg flag;
-
-
+wire flagIn, flagOut;
 
 //pc
-pc_exam ProgramCounter(
+pc_exam ProgramCounter1(
 	.clk(CLK),
 	.start(start),
 	.branch(branch_en),
 	.taken(taken),
-	.rel_jmp(Data), //TODO change?
+	.rel_jmp(ALUData), //TODO change?
 	.pc_in(PC),
 	.pc_out(InstrAddr)
 );
@@ -40,8 +38,9 @@ instr_ROM #(.A(8), .W(9)) INSTR(
     .instAddress(InstrAddr),
     .instrOut(Instruction)
 );
+
 //reg file
-reg_file REG_FILE(
+reg_file REG_FILE1(
   .clk (CLK),
   .write_en(reg_write),
   .oprnd(Instruction[3:0]),
@@ -52,8 +51,8 @@ reg_file REG_FILE(
   .data_outB(dataB),
   .data_outAddrBase(dataC),
   .dr_code(destRegALUin)
-    );
-	 
+);
+
 //alu
 ALU ALU1(
 	.REG_NUM(destRegALUin), //number of the destination reg
@@ -61,11 +60,11 @@ ALU ALU1(
 	.INPUT_A(dataA), // 8 bit destination reg
 	.INPUT_B(dataB), // 8 bit immediate or whatever
 	.INPUT_C(dataC), // address base
-	.C_IN(flag), // carry in or flag bit
+	.C_IN(flagOut), // carry in or flag bit
 	
 	.OUT(ALUData), //8 bit output 
     .OUT_ADDR(memAddr),
-	.FLAG_OUT(flag), //if we need to set the flag
+	.FLAG_OUT(flagIn), //if we need to set the flag
     .TO_WRITE_MEM(mem_write),
     .TO_READ_MEM(mem_read),
 	
@@ -75,7 +74,7 @@ ALU ALU1(
 );
 
 //memory
-dataMem Memory(
+dataMem memory1(
 	.CLK(CLK),
 	.ReadMem(mem_read),
 	.WriteMem(mem_write),
@@ -89,6 +88,13 @@ busmux #(.WIDTH(8), .LPM_WIDTHS(1)) reginMux(
     .datab(MemData),
     .sel(mem_read),
     .result(Data)
+);
+
+lpm_ff #(.LPM_AVALUE(0), .LPM_WIDTH(1)) flagReg(
+    .sload(1),
+    .clock(CLK),
+    .data(flagIn),
+    .q(flagOut),
 );
 
 
