@@ -13,7 +13,8 @@ wire branch_en,
 		taken,
 		reg_write,
 		mem_read,
-		mem_write;
+		mem_write,
+		flag_write;
 wire[3:0] destRegALUin; //destination register
 wire[3:0] destRegALUout; //destination register
 wire[7:0] Data, ALUData, MemData; //data to write to the reg file
@@ -69,7 +70,9 @@ ALU ALU1(
 	.FLAG_OUT(flagIn), //if we need to set the flag
     .TO_WRITE_MEM(mem_write),
     .TO_READ_MEM(mem_read),
-	
+	.write_reg(reg_write),
+	.branch(branch_en),
+	.write_flag(flag_write),
 	.REG_NUM_OUT(destRegALUout)
 	
 	
