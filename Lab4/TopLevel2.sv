@@ -34,7 +34,7 @@ pc_exam ProgramCounter1(
 	.clk(CLK),
 	.start(start),
 	.branch(branch_en),
-	.taken(1),          // TODO: FIgure out if taken is needed
+	.taken(1'b1),          // TODO: FIgure out if taken is needed
 	.rel_jmp(ALUData),
 	.pc_in(InstrAddr),
 	.pc_out(InstrAddr)
