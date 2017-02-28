@@ -32,8 +32,8 @@ opcode_dict = { "setdr" : "00000",
                 "jnz"   : "11001",
                 "clfb"  : "11010",
                 "max"   : "11011",
-                "ckfr"  : "111111110",
-                "halt"  : "111111111"
+                "ckfr"  : "11110",
+                "halt"  : "11111"
               }
 
 # The following ops don't have operand
@@ -110,7 +110,7 @@ def parse_assembly(fileName):
                             labelDict[label] = len(opList) # length of opList = the mem loc of next instr
                 else:   # Found valid operator
                     if tokens[0] in no_oprand_op_list:  # If the operator should have no operand,
-                        opList.append((tokens[0], ""))  # use empty string in place of operand. Store the pair
+                        opList.append((tokens[0], "0")) # use 0 in place of operand. Store the pair
                     elif tokens[0] in jump_op_list:     # If the operator is a jump op
                         # We need to expand the code to populate the r_jump_base
                         opList.append(("setdr", "r14")) # Set r_dr to point to r_jump_base
@@ -180,10 +180,6 @@ def convert_to_mcode(opList, labelDict):
                     mcodeList[-1][:5], jumpDist[:4], mcodeList[-1][9:-3])
 
                 oprval = jumpDist[4:8]
-        # For no operand instruction, use "" for oprval to conform with the line
-        # component combining logic
-        elif operator in no_oprand_op_list:
-            oprval = ""
         # Generate either imm4 or 4 bit register code. Notice we don't append a "0"
         # or an "1" because this is not a two-version op
         else:
