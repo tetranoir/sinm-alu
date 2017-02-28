@@ -116,8 +116,8 @@ always_comb begin
             data_outA = registers[4] | registers[5];
             data_outB = registers[6] | registers[7];
         end
-        // HALT. Clear all lines. For now we don't have a halt signal
-        // register but we will.
+        // HALT. Simply send halt signal.
+        // RELY ON ALU DEFAULT TO BE NOT WRITE TO REG
         opHalt  : begin
             halt = 1;
         end

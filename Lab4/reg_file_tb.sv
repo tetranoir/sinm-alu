@@ -32,6 +32,7 @@ module reg_file_tb;
                 data_outB,
                 data_outAddrBase;
     wire [3:0]  dr_code;
+    wire        halt;
 
     integer i, alert_code;
     bit alert;
@@ -46,7 +47,9 @@ module reg_file_tb;
         .data_outA(data_outA),
         .data_outAddrBase(data_outAddrBase),
         .data_outB(data_outB),
-        .dr_code(dr_code));
+        .dr_code(dr_code),
+        .halt
+    );
 
     assign op_mne = mne'(write_en);
     initial begin
@@ -284,8 +287,7 @@ module reg_file_tb;
         
         full_instr = 9'h1f0;    // halt r0
         #10ns;
-        if (data_outA != 8'h00 || data_outB != 8'h00 ||
-            data_outAddrBase != 8'h00 || dr_code != 4'h0)
+        if (halt != 1'b1)
             alert = 1;
         #10ns;
         alert = 0;

@@ -22,7 +22,7 @@ module TopLevel_tb17;     // Lab 17
   wire halt;		      // done/finished flag
 
 // Instantiate the Device Under Test (DUT)
-  dummy_dut17 DUT (
+  TopLevel DUT (
 	.start       (start), 
 	.CLK         (CLK)  , 
 	.halt             	  // equiv. to .halt (halt)
@@ -30,43 +30,48 @@ module TopLevel_tb17;     // Lab 17
   logic signed[15:0] OpA, OpB;
   int Prod;               // 32-bit expected product of OpA*OpB
   int cycle_ct;           // clock cycle counter
+  
+
 initial begin
   start = 1'b1;		      // initialize PC; freeze everything temporarily
+  // Loads instructions to instruction ROM
+  $readmemb("../17_mcode.txt",DUT.INSTR.inst_rom);
 
 // Initialize DUT's data memory
-// edit index limit for size other than 256 elements
   #10ns for(int i=0; i<256; i++) begin
-    DUT.data_mem1.my_memory[i] = 8'h0;	     // clear data_mem
+    DUT.memory1.MEM[i] = 8'h0;	     // clear data_mem
   end
 // $random returns a 32-bit integer; we'll take the top half
     OpA = ($random)>>16;
 	OpB = ($random)>>16;
 	$display(OpA,,,OpB);
-    DUT.data_mem1.my_memory[1] = OpA[15: 8];  // MSW of operand A
-    DUT.data_mem1.my_memory[2] = OpA[ 7: 0];
-    DUT.data_mem1.my_memory[3] = OpB[15: 8];  // MSW of operand B
-    DUT.data_mem1.my_memory[4] = OpB[ 7: 0];
+    DUT.memory1.MEM[1] = OpA[15: 8];  // MSW of operand A
+    DUT.memory1.MEM[2] = OpA[ 7: 0];
+    DUT.memory1.MEM[3] = OpB[15: 8];  // MSW of operand B
+    DUT.memory1.MEM[4] = OpB[ 7: 0];
+    
 // students may also pre_load desired constants into any 
 //  part of data_mem 
 
 // Initialize DUT's register file
   for(int j=0; j<16; j++)
-    DUT.reg_file1.registers[j] = 8'b0;    // default -- clear it
+    DUT.REG_FILE1.registers[j] = 8'b0;    // default -- clear it
+
 // students may pre-load desired constants into the reg_file
-//   as shown above for my_memory[1:4]
+//   as shown above for MEM[1:4]
     
 // launch program in DUT
   #10ns start = 0;
 // Wait for done flag, then display results
   #10ns wait (halt);
-  #10ns $displayh("dut_result = ",DUT.data_mem1.my_memory[5],
-                  DUT.data_mem1.my_memory[6],"_",
-                  DUT.data_mem1.my_memory[7],
-                  DUT.data_mem1.my_memory[8]);
+  #10ns $displayh("dut_result = ",DUT.memory1.MEM[5],
+                  DUT.memory1.MEM[6],"_",
+                  DUT.memory1.MEM[7],
+                  DUT.memory1.MEM[8]);
 		Prod = OpA * OpB;        // expected result
 		$displayh("bench_rslt = ",Prod[31:16],,Prod[15:0]);
         $display("cycle count = %d",cycle_ct);
-        $display("instruction = %d %t",DUT.PC,$time);
+        $display("instruction = %d %t",DUT.instr_cnt,$time);
   #10ns $stop;			   
 end
 

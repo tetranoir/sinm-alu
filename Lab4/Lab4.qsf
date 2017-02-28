@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE auto
-set_global_assignment -name TOP_LEVEL_ENTITY TopLevel_tb18
+set_global_assignment -name TOP_LEVEL_ENTITY TopLevel
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:23:23  FEBRUARY 27, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
@@ -47,13 +47,17 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
+set_global_assignment -name SYSTEMVERILOG_FILE TopLevel2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE TopLevel_tb17.sv
+set_global_assignment -name SYSTEMVERILOG_FILE reg_file_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE reg_file.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pc_testbench.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pc_exam.sv
+set_global_assignment -name SYSTEMVERILOG_FILE instr_ROM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE definitions.sv
+set_global_assignment -name SYSTEMVERILOG_FILE dataMem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE data_mem_testlab18.sv
-set_global_assignment -name SYSTEMVERILOG_FILE TopLevel_tb18.sv
-set_global_assignment -name SYSTEMVERILOG_FILE dummy_dut18.sv
-set_global_assignment -name SYSTEMVERILOG_FILE reg_file_testlab17.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PC_testlab17.sv
-set_global_assignment -name SYSTEMVERILOG_FILE instr_rom_testlab17.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

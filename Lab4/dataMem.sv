@@ -9,7 +9,6 @@ module dataMem(
 
 logic[7:0] MEM[256];
 
-//TODO initialize memory
 always_comb
 	if(ReadMem) begin
 		DataOut = MEM[DataAddr];

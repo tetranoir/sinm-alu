@@ -181,21 +181,7 @@ always_comb begin
 				FLAG_OUT = 1;
 				write_flag = 1;
 			end
-			
-		
-	
 	endcase
-	
-	
-
-
-
-
-
-
-
 end //end always_comb
-
-
 
 endmodule
