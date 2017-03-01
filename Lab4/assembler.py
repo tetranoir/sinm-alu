@@ -246,10 +246,12 @@ def main(argv=None):
     for mcode in mcodeList:
         print(mcode)
     '''
-    dotpos = argv[1].find('.')
+    dotpos = argv[1].rfind('.')
+    slashpos = max(argv[1].rfind('/'), argv[1].rfind('\\'))
     filename = argv[1]
     if dotpos != -1:
         filename = filename[:dotpos]
+    filename = filename[(slashpos + 1):]
     try:
         outf = open(filename + "_mcode.txt", "w")
     except IOError:
@@ -272,5 +274,3 @@ def main(argv=None):
 if __name__ == "__main__":
     sys.exit(main())
 
-if "kk" not in opcode_dict:
-    print ("Waaaaaaa")
