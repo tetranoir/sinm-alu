@@ -1,0 +1,132 @@
+# registers:
+# $r0 - pattern to look for
+# $r1 - number of single matches
+# $r2 - number of double matches
+# $r3 - number of triple matches
+# $r4 - number of quadruple matches
+# $r5 - number of quintiple matches
+# $r6 - address of part of array we are accessing
+# $r7 - number of matches found
+# $r8 - number of iterations
+# $r9 - string in array we aretrying to find matches sin
+
+
+#get pattern and put into $r0
+setdr 0	 	#destination = $r0 = pattern
+load 9		#pattern = memory[9]
+
+#set address base to 0010 0000
+setdr 13	#$r13 = 0000 0010
+mov 2
+
+setdr 6		#destination = $r6 = address
+load 0		#address = 32 (beginning of array)
+
+#set address base to 96 to compare if we looped through entire array
+#0110 0000
+setdr 13
+mov 6
+load 0
+
+
+TRAVERSE_ARRAY:
+setdr 6
+
+#check if address == 96
+cmp r13
+jfnz END	# go to end. we have reached the end of the array
+
+setdr 9
+load r6		#string = memory[address]
+clr r7		#counter = 0 - keep track of num matches
+clr r8		#iterations = 0 - keep track of how many times we compared with string
+
+
+CHECK_MATCH:
+setdr 8
+cmp 5
+jfnz HISTOGRAM	#while we have not finished analyzing the string byte in the array (5 iterations)
+
+incr r8		#iterations++
+
+setdr 9
+clfb r0		#check if pattern match occurred
+
+shr 1		#shift string to the right by 1 bit
+
+#if xor == 0, occurrence match
+jfnz CHECK_MATCH	#go to next iteration
+
+incr r7			#counter++
+
+jmp CHECK_MATCH
+
+HISTOGRAM:
+
+#increment correct histogram location depending on value of counter
+setdr 7
+
+cmp 0
+jfnz AFTER_HIST
+
+cmp 1
+jfnz SINGLE
+
+cmp 2
+jfnz DOUBLE
+
+cmp 3
+jfnz TRIPLE
+
+cmp 4
+jfnz QUAD
+
+cmp 5 
+jfnz QUINT
+
+SINGLE:
+incr r1
+jmp AFTER_HIST
+
+DOUBLE:
+incr r2
+jmp AFTER_HIST
+
+TRIPLE:
+incr r3
+jmp AFTER_HIST
+
+QUAD:
+incr r4
+jmp AFTER_HIST
+
+QUINT:
+incr r5
+
+AFTER_HIST:
+
+incr r6		#go to next array index
+jmp TRAVERSE_ARRAY
+
+END:
+#write histogram to mem
+setdr 13
+mov 0		# reset base address to 0 so we can write to locations 10-14
+
+setdr 1
+store 10
+
+setdr 2
+store 11
+
+setdr 3
+store 12
+
+setdr 4
+store 13
+
+setdr 5
+store 14
+
+
+halt
