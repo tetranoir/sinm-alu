@@ -35,15 +35,15 @@ module TopLevel_tb17;     // Lab 17
 initial begin
   start = 1'b1;		      // initialize PC; freeze everything temporarily
   // Loads instructions to instruction ROM
-  $readmemb("17_mcode.txt",DUT.INSTR.inst_rom);
+  $readmemb("../assembly_code/17_mcode.txt",DUT.INSTR.inst_rom);
 
 // Initialize DUT's data memory
   #10ns for(int i=0; i<256; i++) begin
     DUT.memory1.MEM[i] = 8'h0;	     // clear data_mem
   end
 // $random returns a 32-bit integer; we'll take the top half
-    OpA = ($urandom)>>16;
-	OpB = ($urandom)>>16;
+    OpA = ($random)>>16;
+	OpB = ($random)>>16;
 	$display(OpA,,,OpB);
     DUT.memory1.MEM[1] = OpA[15: 8];  // MSW of operand A
     DUT.memory1.MEM[2] = OpA[ 7: 0];
