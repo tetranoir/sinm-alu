@@ -42,8 +42,8 @@ initial begin
     DUT.memory1.MEM[i] = 8'h0;	     // clear data_mem
   end
 // $random returns a 32-bit integer; we'll take the top half
-    OpA = ($random)>>16;
-	OpB = ($random)>>16;
+    OpA = ($urandom)>>16;
+	OpB = ($urandom)>>16;
 	$display(OpA,,,OpB);
     DUT.memory1.MEM[1] = OpA[15: 8];  // MSW of operand A
     DUT.memory1.MEM[2] = OpA[ 7: 0];
@@ -61,7 +61,7 @@ initial begin
 //   as shown above for MEM[1:4]
     
 // launch program in DUT
-  #10ns start = 0;
+  #5ns start = 0;
 // Wait for done flag, then display results
   #10ns wait (halt);
   #10ns $displayh("dut_result = ",DUT.memory1.MEM[5],

@@ -9,7 +9,7 @@ module pc_exam (
     output logic[7:0] pc_out
 );
 
-always @(posedge clk) 
+always @(negedge clk) 
     if (start) begin
         pc_out <= 0;
     end
