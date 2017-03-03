@@ -1,0 +1,87 @@
+load_B:
+setdr	r15 
+mov	4     // Set the initial address to load from, r15 = 4
+setdr	r7  
+load	r15 
+decr    r15     // r15 = 3
+setdr	r6  
+load    r15 
+
+setdr	r5 
+load	r15 
+sar	7  
+setdr	r4 
+load	r15 
+sar	7     // Sign ext. B to 4*8 bits
+
+load_A:
+decr	r15     // r15 = 2
+setdr	r3  
+load	r15 
+decr	r15     // r15 = 1
+setdr	r2  
+load	r15 
+
+setdr	r1 
+load	r15 
+sar	7  
+setdr	r0 
+load	r15 
+sar	7     // Sign ext. A to 4*8 bits
+
+// Assume r8-11, 15 set to 0 already
+
+while1_begin:
+ckfr	      // Check if r4-r8 are all 0s
+jfnz	while1_body 
+jmp	while1_end 
+
+while1_body:
+setdr	r15 
+mov	r7 
+rcr	r15 
+jfnz	if1_body 
+jmp	if1_end 
+
+if1_body:
+clr	r15     // Assuming clr also clears the flag 
+setdr	r11     // Add A to corresponding registers in r8-r11.
+addc	r3 
+setdr	r10     // Lower bytes first to account for carry out
+addc	r2 
+setdr	r9 
+addc	r1 
+setdr	r8 
+addc	r0 
+
+if1_end:
+clr	r15    // Assuming clr also clears the flag
+rcl	r3     // Shift A to left via (register + carry) rotation.
+rcl	r2 
+rcl	r1 
+rcl	r0 
+
+clr	r15    // Assuming clr also clears the flag
+rcr	r4     // Shift B to right (logically) via (register + carry) 
+               // rotation.
+rcr	r5  
+rcr	r6  
+rcr	r7 
+jmp	while1_begin
+
+while1_end:
+setdr	r15     // Start outputting results
+mov	5 
+setdr	r8 
+store	r15 
+incr	r15 
+setdr	r9 
+store	r15 
+incr	r15 
+setdr	r10 
+store	r15 
+incr	r15 
+setdr	r11 
+store	r15 
+incr	r15 
+halt

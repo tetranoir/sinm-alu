@@ -35,7 +35,7 @@ module TopLevel_tb17;     // Lab 17
 initial begin
   start = 1'b1;		      // initialize PC; freeze everything temporarily
   // Loads instructions to instruction ROM
-  $readmemb("17_mcode.txt",DUT.INSTR.inst_rom);
+  $readmemb("../assembly_code/17_mcode.txt",DUT.INSTR.inst_rom);
 
 // Initialize DUT's data memory
   #10ns for(int i=0; i<256; i++) begin
@@ -61,7 +61,7 @@ initial begin
 //   as shown above for MEM[1:4]
     
 // launch program in DUT
-  #10ns start = 0;
+  #5ns start = 0;
 // Wait for done flag, then display results
   #10ns wait (halt);
   #10ns $displayh("dut_result = ",DUT.memory1.MEM[5],
