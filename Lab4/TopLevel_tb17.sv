@@ -35,7 +35,7 @@ module TopLevel_tb17;     // Lab 17
 initial begin
   start = 1'b1;		      // initialize PC; freeze everything temporarily
   // Loads instructions to instruction ROM
-  $readmemb("../assembly_code/17_mcode.txt",DUT.INSTR.inst_rom);
+  $readmemb("17_mcode.txt",DUT.INSTR.inst_rom);
 
 // Initialize DUT's data memory
   #10ns for(int i=0; i<256; i++) begin
