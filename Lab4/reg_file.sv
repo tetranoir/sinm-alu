@@ -33,8 +33,10 @@ logic [7:0] registers[2**4];
 
 // Reg file writing.
 always_ff @ (posedge clk)
-  if (write_en)
+  if (write_en)begin
     registers[waddr] <= data_in;
+	 
+	 end
 
 always_comb begin
     // There are four output lines for the reg file,

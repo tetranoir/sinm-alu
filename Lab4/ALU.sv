@@ -38,7 +38,7 @@ always_comb begin
 	
 
 	case(OP)
-		opSetdr: begin OUT = INPUT_B; write_reg = 1; end
+		opSetdr: begin OUT = INPUT_B; write_reg = 1;end
 		opAdd: begin 
 			{FLAG_OUT, OUT} = INPUT_A + INPUT_B; //any overflow get stored in flagout
 			write_reg = 1;
@@ -68,11 +68,13 @@ always_comb begin
             OUT_ADDR = (INPUT_C << 4) + INPUT_B[3:0];
             TO_READ_MEM = 1;
 				write_reg = 1;
+				
         end
 		opLoadReg: begin
             OUT_ADDR = INPUT_B;
             TO_READ_MEM = 1;
 				write_reg = 1;
+				
         end
 		
 		opStoreImm: begin
@@ -80,11 +82,13 @@ always_comb begin
             OUT_ADDR = (INPUT_C << 4) + INPUT_B[3:0];
             TO_WRITE_MEM = 1;
 				
+				
         end
 		opStoreReg: begin
             OUT = INPUT_A;
             OUT_ADDR = INPUT_B;
             TO_WRITE_MEM = 1;
+				
         end
 		
 		opMovImm: begin OUT = INPUT_B[3:0]; write_reg = 1; end
@@ -159,6 +163,7 @@ always_comb begin
 		opClfb: if(((INPUT_A ^ INPUT_B)& 8'h0F) == 0) begin
 						FLAG_OUT = 0;
 						write_flag = 1;
+						
 					end else begin 
 						FLAG_OUT = 1; 
 						write_flag = 1;
