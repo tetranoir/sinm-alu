@@ -22,7 +22,7 @@ module TopLevel_tb19;     // Lab 18
   wire halt;		      // done/finished flag
 
 // Instantiate the Device Under Test (DUT)
-  dummy_dut19 DUT (
+  TopLevel DUT (
 	.start       (start), 
 	.CLK         (CLK)  , 
 	.halt             	  // equiv. to .halt (halt)
@@ -44,37 +44,40 @@ module TopLevel_tb19;     // Lab 18
   endfunction
 
 initial begin
+$display("4");
   start = 1'b1;		      // initialize PC; freeze everything temporarily
-
+  // Loads instructions to instruction ROM
+  $readmemb("farpair2_mcode.txt",DUT.INSTR.inst_rom);
+$display("5+++");
 // Initialize DUT's data memory
 // edit index limit for size other than 256 elements
   #10ns for(int i=0; i<256; i++) begin
-    DUT.data_mem1.my_memory[i] = 8'h0;	     // clear data_mem
+    DUT.memory1.MEM[i] = 8'h0;	     // clear data_mem
     mymem[i] = 8'b0;
   end
+// Initialize DUT's register file
+  for(int j=0; j<16; j++)
+    DUT.REG_FILE1.registers[j] = 8'b0;    // default -- clear it
+$display("6");
 // load 20 random unsigned bytes into data_memory
   for(int j=128; j<148; j++) begin
     jaldo = $random;
     mymem[j] = jaldo;
-    DUT.data_mem1.my_memory[j] = jaldo;  // 
+    DUT.memory1.MEM[j] = jaldo;  // 
 	$display("%d  %b",j,jaldo);
 	#10ns;// $displayb(mymem[j]);
   end
-// students may also pre_load desired constants into any 
-//  part of data_mem 
-// Initialize DUT's register file
-//  for(int j=0; j<16; j++)
-//    DUT.reg_file1.registers[j] = 8'b0;    // default -- clear it
-// students may pre-load desired constants into the reg_file
-//   as shown above for my_memory[1:4]
+$display("7");
     
 // launch program in DUT
   #10ns start = 0;
 // Wait for done flag, then display results
   #10ns wait (halt);
+$display("8");
   ham = 0;
   ham_max = 0;
 // search the upper triangle (190 of 400 permutations)
+$display("9");
   #10ns for(int l=128; l<148; l++) begin
           for(int m=l+1; m<148; m++) begin
    	        ham = corr(mymem[l],mymem[m]);
@@ -87,13 +90,14 @@ initial begin
 		  end
           $display();
  	    end
+$display("10");
 // testbench's histogram
 // for diagnostics, also display where we found the max.
     	$display("testbench max: ",ham_max,,indi,,indj);
 // DUT's histogram
-        $display("DUT       max: ",ham_max);
+        $display("DUT       max: ",DUT.memory1.MEM[127]);
         $display("cycle count = %d",cycle_ct);
-//        $display("instruction = %d %t",DUT.PC,$time);
+        $display("instruction = %d %t",DUT.instr_cnt,$time);
   #10ns $stop;			   
 end
 

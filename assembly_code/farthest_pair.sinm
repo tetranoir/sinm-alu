@@ -1,0 +1,72 @@
+# registers:
+# $r0 - number to compare
+# $r1 - other number to compare
+# $r2 - hamming distance of the two numbers compared
+# $r3 - used for the algorithm (in line: val &= val - 1 => stores: val - 1)
+# $r4 - set to 128, memory offset for data
+# $r5 - inner loop counter
+# $r6 - max distance found so far
+# $r7 - set to 148, location of the last element in memory
+# $r8 - set to 127, the return location of the answer
+
+
+setdr r4
+mov 1				# let r4 be our memory offset (outer loop counter)
+shl 7				# $r4 = 128
+clr r6				# stores the max hamming dist
+setdr r7
+mov 9
+shl 2
+#add 4				# $r7 = const 148, for some reason 4=>128 in alu
+incr r7
+shl 2				# $r7 = 148
+
+outer_loop:
+setdr r0
+load r4
+incr r4				# r4 = r4 + 1, counter incr
+setdr r5
+mov r4				# r5 = r4, r5 is our inner loop counter
+
+inner_loop:
+setdr r1
+load r5
+incr r5				# r5 = r5 + 1, counter incr
+
+					# Assume the two numbers to be compared are in r0, r1
+xor r0				# May need to reuse r0, so overwrite r1
+clr r2				# Let r2 be the distance
+
+count_start:
+setdr r1			# dr reset after jmp
+cmp 0				# flag set to 1 if r1 is 0, 0 else
+jfnz count_end		# jump to end if r1 is 0, else fall through
+incr r2				# r2 is dist, at least a 1 exists in r1
+setdr r3
+mov r1
+decr r3				# r3 = r1 - 1, for the algorithm
+setdr r1
+and r3				# Last 3 lines = r1 &= (r1 - 1);
+
+					# this op removes the least sig 1 in r1
+jmp count_start
+count_end:
+setdr r6
+max r2				# sets r6 to max(r6, r2)
+setdr r5
+cmp r7
+jfnz inner_loop		# jmp if nz => jmp if 1 => jmp if cmp ==
+
+setdr r4
+cmp r7
+jfnz outer_loop		# jmp if nz => jmp if 1 => jmp if cmp ==
+
+setdr r8
+mov 1
+shl 7
+#sar 7					# $r8 = 127 ---wronggg
+decr r8					# 128 - 1
+setdr r6
+store r8				# Mem[127] = $r6
+
+halt

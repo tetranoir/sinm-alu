@@ -36,11 +36,12 @@ initial begin
   start = 1'b1;		      // initialize PC; freeze everything temporarily
   // Loads instructions to instruction ROM
   $readmemb("17_mcode.txt",DUT.INSTR.inst_rom);
-
+//$display("1");
 // Initialize DUT's data memory
   #10ns for(int i=0; i<256; i++) begin
     DUT.memory1.MEM[i] = 8'h0;	     // clear data_mem
   end
+//$display("2");
 // $random returns a 32-bit integer; we'll take the top half
     OpA = ($random)>>16;
 	OpB = ($random)>>16;

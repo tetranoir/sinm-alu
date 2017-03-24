@@ -1,0 +1,1941 @@
+# Reading C:/intelFPGA_lite/16.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab4_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4 {C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:08:15 on Mar 22,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4" C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv 
+# -- Compiling module TopLevel
+# 
+# Top level modules:
+# 	TopLevel
+# End time: 16:08:15 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4 {C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:08:15 on Mar 22,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4" C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv 
+# -- Compiling module pc_exam
+# 
+# Top level modules:
+# 	pc_exam
+# End time: 16:08:15 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4 {C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:08:15 on Mar 22,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4" C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv 
+# -- Compiling module instr_ROM
+# 
+# Top level modules:
+# 	instr_ROM
+# End time: 16:08:15 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4 {C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:08:15 on Mar 22,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4" C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv 
+# -- Compiling package definitions
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:08:15 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4 {C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:08:15 on Mar 22,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4" C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv 
+# -- Compiling module dataMem
+# 
+# Top level modules:
+# 	dataMem
+# End time: 16:08:15 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4 {C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:08:15 on Mar 22,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4" C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 16:08:15 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4 {C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:08:15 on Mar 22,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4" C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package definitions
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 16:08:15 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+cd C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4
+# reading C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/../modelsim.ini
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 16:09:09 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/CLK
+run
+run
+run
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package definitions
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 16:10:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv 
+# -- Compiling module dataMem
+# 
+# Top level modules:
+# 	dataMem
+# End time: 16:10:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv 
+# -- Compiling package definitions
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:10:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv 
+# -- Compiling module instr_ROM
+# 
+# Top level modules:
+# 	instr_ROM
+# End time: 16:10:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv 
+# -- Compiling module instr_rom
+# 
+# Top level modules:
+# 	instr_rom
+# End time: 16:10:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv 
+# -- Compiling module pc_exam
+# 
+# Top level modules:
+# 	pc_exam
+# End time: 16:10:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv 
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 16:10:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv 
+# -- Compiling module PCt
+# 
+# Top level modules:
+# 	PCt
+# End time: 16:10:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:19 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 16:10:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:19 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv 
+# -- Compiling package reg_file_tb_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file_tb
+# 
+# Top level modules:
+# 	reg_file_tb
+# End time: 16:10:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:19 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv 
+# -- Compiling module TopLevel_tb17
+# 
+# Top level modules:
+# 	TopLevel_tb17
+# End time: 16:10:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:19 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv 
+# -- Compiling module TopLevel_tb18
+# 
+# Top level modules:
+# 	TopLevel_tb18
+# End time: 16:10:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:19 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# 
+# Top level modules:
+# 	TopLevel_tb19
+# End time: 16:10:20 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:10:20 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv 
+# -- Compiling module TopLevel
+# 
+# Top level modules:
+# 	TopLevel
+# End time: 16:10:20 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 16:10:36 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/start
+run
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:15 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package definitions
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 16:12:16 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:16 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv 
+# -- Compiling module dataMem
+# 
+# Top level modules:
+# 	dataMem
+# End time: 16:12:16 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:16 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv 
+# -- Compiling package definitions
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:12:16 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:16 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv 
+# -- Compiling module instr_ROM
+# 
+# Top level modules:
+# 	instr_ROM
+# End time: 16:12:16 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:16 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv 
+# -- Compiling module instr_rom
+# 
+# Top level modules:
+# 	instr_rom
+# End time: 16:12:16 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:16 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv 
+# -- Compiling module pc_exam
+# 
+# Top level modules:
+# 	pc_exam
+# End time: 16:12:16 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:16 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv 
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 16:12:16 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:16 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv 
+# -- Compiling module PCt
+# 
+# Top level modules:
+# 	PCt
+# End time: 16:12:16 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:16 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 16:12:16 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:16 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv 
+# -- Compiling package reg_file_tb_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file_tb
+# 
+# Top level modules:
+# 	reg_file_tb
+# End time: 16:12:17 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:17 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv 
+# -- Compiling module TopLevel_tb17
+# 
+# Top level modules:
+# 	TopLevel_tb17
+# End time: 16:12:17 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:17 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv 
+# -- Compiling module TopLevel_tb18
+# 
+# Top level modules:
+# 	TopLevel_tb18
+# End time: 16:12:17 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:18 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# ** Error: C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv(16): (vlog-13161) unexpected '$display', expecting elaboration system task $fatal/$error/$warning/$info.
+# ** Error: C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv(35): (vlog-13161) unexpected '$display', expecting elaboration system task $fatal/$error/$warning/$info.
+# ** Error: C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv(45): (vlog-13161) unexpected '$display', expecting elaboration system task $fatal/$error/$warning/$info.
+# End time: 16:12:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:18 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv 
+# -- Compiling module TopLevel
+# 
+# Top level modules:
+# 	TopLevel
+# End time: 16:12:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:21 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package definitions
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 16:13:22 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:22 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv 
+# -- Compiling module dataMem
+# 
+# Top level modules:
+# 	dataMem
+# End time: 16:13:22 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:22 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv 
+# -- Compiling package definitions
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:13:22 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:22 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv 
+# -- Compiling module instr_ROM
+# 
+# Top level modules:
+# 	instr_ROM
+# End time: 16:13:22 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:22 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv 
+# -- Compiling module instr_rom
+# 
+# Top level modules:
+# 	instr_rom
+# End time: 16:13:22 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:22 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv 
+# -- Compiling module pc_exam
+# 
+# Top level modules:
+# 	pc_exam
+# End time: 16:13:22 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:22 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv 
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 16:13:22 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:22 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv 
+# -- Compiling module PCt
+# 
+# Top level modules:
+# 	PCt
+# End time: 16:13:22 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:22 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 16:13:22 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:22 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv 
+# -- Compiling package reg_file_tb_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file_tb
+# 
+# Top level modules:
+# 	reg_file_tb
+# End time: 16:13:23 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:23 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv 
+# -- Compiling module TopLevel_tb17
+# 
+# Top level modules:
+# 	TopLevel_tb17
+# End time: 16:13:23 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:23 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv 
+# -- Compiling module TopLevel_tb18
+# 
+# Top level modules:
+# 	TopLevel_tb18
+# End time: 16:13:23 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:23 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# 
+# Top level modules:
+# 	TopLevel_tb19
+# End time: 16:13:23 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:23 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv 
+# -- Compiling module TopLevel
+# 
+# Top level modules:
+# 	TopLevel
+# End time: 16:13:23 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.TopLevel_tb17
+# vsim work.TopLevel_tb17 
+# Start time: 16:13:46 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb17
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb17/CLK
+run
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 16:14:19 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/CLK
+run
+# 4
+# 5
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:45 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package definitions
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 16:15:45 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:45 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv 
+# -- Compiling module dataMem
+# 
+# Top level modules:
+# 	dataMem
+# End time: 16:15:45 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:45 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv 
+# -- Compiling package definitions
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:15:45 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:45 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv 
+# -- Compiling module instr_ROM
+# 
+# Top level modules:
+# 	instr_ROM
+# End time: 16:15:45 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:45 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv 
+# -- Compiling module instr_rom
+# 
+# Top level modules:
+# 	instr_rom
+# End time: 16:15:46 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:46 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv 
+# -- Compiling module pc_exam
+# 
+# Top level modules:
+# 	pc_exam
+# End time: 16:15:46 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:46 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv 
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 16:15:46 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:46 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv 
+# -- Compiling module PCt
+# 
+# Top level modules:
+# 	PCt
+# End time: 16:15:46 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:46 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 16:15:46 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:46 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv 
+# -- Compiling package reg_file_tb_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file_tb
+# 
+# Top level modules:
+# 	reg_file_tb
+# End time: 16:15:46 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:46 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv 
+# -- Compiling module TopLevel_tb17
+# 
+# Top level modules:
+# 	TopLevel_tb17
+# End time: 16:15:46 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:46 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv 
+# -- Compiling module TopLevel_tb18
+# 
+# Top level modules:
+# 	TopLevel_tb18
+# End time: 16:15:46 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:46 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# 
+# Top level modules:
+# 	TopLevel_tb19
+# End time: 16:15:47 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:15:47 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv 
+# -- Compiling module TopLevel
+# 
+# Top level modules:
+# 	TopLevel
+# End time: 16:15:47 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 16:16:08 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/CLK
+run
+# 4
+# 5
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:46 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package definitions
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 16:16:47 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:47 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv 
+# -- Compiling module dataMem
+# 
+# Top level modules:
+# 	dataMem
+# End time: 16:16:47 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:47 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv 
+# -- Compiling package definitions
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:16:47 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:47 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv 
+# -- Compiling module instr_ROM
+# 
+# Top level modules:
+# 	instr_ROM
+# End time: 16:16:47 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:47 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv 
+# -- Compiling module instr_rom
+# 
+# Top level modules:
+# 	instr_rom
+# End time: 16:16:47 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:47 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv 
+# -- Compiling module pc_exam
+# 
+# Top level modules:
+# 	pc_exam
+# End time: 16:16:47 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:47 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv 
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 16:16:47 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:47 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv 
+# -- Compiling module PCt
+# 
+# Top level modules:
+# 	PCt
+# End time: 16:16:47 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:47 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 16:16:47 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:47 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv 
+# -- Compiling package reg_file_tb_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file_tb
+# 
+# Top level modules:
+# 	reg_file_tb
+# End time: 16:16:47 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:47 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv 
+# -- Compiling module TopLevel_tb17
+# 
+# Top level modules:
+# 	TopLevel_tb17
+# End time: 16:16:48 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:48 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv 
+# -- Compiling module TopLevel_tb18
+# 
+# Top level modules:
+# 	TopLevel_tb18
+# End time: 16:16:48 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:48 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# 
+# Top level modules:
+# 	TopLevel_tb19
+# End time: 16:16:48 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:48 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv 
+# -- Compiling module TopLevel
+# 
+# Top level modules:
+# 	TopLevel
+# End time: 16:16:48 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 16:17:00 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/CLK
+run
+# 4
+# 5+++
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:21:48 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv 
+# -- Compiling module TopLevel_tb17
+# 
+# Top level modules:
+# 	TopLevel_tb17
+# End time: 16:21:48 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.TopLevel_tb17
+# vsim work.TopLevel_tb17 
+# Start time: 16:22:01 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb17
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb17/CLK
+run
+# 1
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:08:40 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv 
+# -- Compiling module TopLevel_tb17
+# 
+# Top level modules:
+# 	TopLevel_tb17
+# End time: 18:08:40 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.TopLevel_tb17
+# vsim work.TopLevel_tb17 
+# Start time: 18:08:54 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb17
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb17/CLK
+run
+# 1
+run
+run
+run
+run -continue
+run -continue
+run -all
+# 2
+#   4629  -16247
+# dut_result = fb84_6d3d
+# bench_rslt = fb84 6d3d
+# cycle count =        1004
+# instruction =        1005             10060000
+# ** Note: $stop    : C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv(76)
+#    Time: 10070 ns  Iteration: 0  Instance: /TopLevel_tb17
+# Break in Module TopLevel_tb17 at C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv line 76
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 18:10:34 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/start \
+sim:/TopLevel_tb19/CLK \
+sim:/TopLevel_tb19/halt \
+sim:/TopLevel_tb19/ham \
+sim:/TopLevel_tb19/ham_max \
+sim:/TopLevel_tb19/mymem \
+sim:/TopLevel_tb19/jaldo \
+sim:/TopLevel_tb19/indi \
+sim:/TopLevel_tb19/indj \
+sim:/TopLevel_tb19/cycle_ct
+run -all
+# 4
+# 5+++
+# 6
+#         128  00100100
+#         129  10000001
+#         130  00001001
+#         131  01100011
+#         132  00001101
+#         133  10001101
+#         134  01100101
+#         135  00010010
+#         136  00000001
+#         137  00001101
+#         138  01110110
+#         139  00111101
+#         140  11101101
+#         141  10001100
+#         142  11111001
+#         143  11000110
+#         144  11000101
+#         145  10101010
+#         146  11100101
+#         147  01110111
+# 7
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package definitions
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 18:13:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv 
+# -- Compiling module dataMem
+# 
+# Top level modules:
+# 	dataMem
+# End time: 18:13:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv 
+# -- Compiling package definitions
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:13:18 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:18 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv 
+# -- Compiling module instr_ROM
+# 
+# Top level modules:
+# 	instr_ROM
+# End time: 18:13:19 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:19 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv 
+# -- Compiling module instr_rom
+# 
+# Top level modules:
+# 	instr_rom
+# End time: 18:13:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:19 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv 
+# -- Compiling module pc_exam
+# 
+# Top level modules:
+# 	pc_exam
+# End time: 18:13:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:19 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv 
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 18:13:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:19 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv 
+# -- Compiling module PCt
+# 
+# Top level modules:
+# 	PCt
+# End time: 18:13:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:19 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 18:13:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:19 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv 
+# -- Compiling package reg_file_tb_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file_tb
+# 
+# Top level modules:
+# 	reg_file_tb
+# End time: 18:13:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:19 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv 
+# -- Compiling module TopLevel_tb17
+# 
+# Top level modules:
+# 	TopLevel_tb17
+# End time: 18:13:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:19 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv 
+# -- Compiling module TopLevel_tb18
+# 
+# Top level modules:
+# 	TopLevel_tb18
+# End time: 18:13:19 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:19 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# 
+# Top level modules:
+# 	TopLevel_tb19
+# End time: 18:13:20 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:20 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv 
+# -- Compiling module TopLevel
+# 
+# Top level modules:
+# 	TopLevel
+# End time: 18:13:20 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:24 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package definitions
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 18:44:24 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:24 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv 
+# -- Compiling module dataMem
+# 
+# Top level modules:
+# 	dataMem
+# End time: 18:44:24 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:24 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv 
+# -- Compiling package definitions
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:44:24 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:24 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv 
+# -- Compiling module instr_ROM
+# 
+# Top level modules:
+# 	instr_ROM
+# End time: 18:44:24 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:24 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_rom_testlab17.sv 
+# -- Compiling module instr_rom
+# 
+# Top level modules:
+# 	instr_rom
+# End time: 18:44:24 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:24 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv 
+# -- Compiling module pc_exam
+# 
+# Top level modules:
+# 	pc_exam
+# End time: 18:44:24 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:24 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_testbench.sv 
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 18:44:24 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:24 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/PC_testlab17.sv 
+# -- Compiling module PCt
+# 
+# Top level modules:
+# 	PCt
+# End time: 18:44:25 on Mar 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:25 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 18:44:25 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:25 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file_tb.sv 
+# -- Compiling package reg_file_tb_sv_unit
+# -- Importing package definitions
+# -- Compiling module reg_file_tb
+# 
+# Top level modules:
+# 	reg_file_tb
+# End time: 18:44:25 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:25 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb17.sv 
+# -- Compiling module TopLevel_tb17
+# 
+# Top level modules:
+# 	TopLevel_tb17
+# End time: 18:44:25 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:25 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb18.sv 
+# -- Compiling module TopLevel_tb18
+# 
+# Top level modules:
+# 	TopLevel_tb18
+# End time: 18:44:25 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:25 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# 
+# Top level modules:
+# 	TopLevel_tb19
+# End time: 18:44:25 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:44:25 on Mar 22,2017
+# vlog -reportprogress 30 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv 
+# -- Compiling module TopLevel
+# 
+# Top level modules:
+# 	TopLevel
+# End time: 18:44:25 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/ham_max
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/ham
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/DUT/CLK
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:48:02 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# 
+# Top level modules:
+# 	TopLevel_tb19
+# End time: 18:48:02 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 18:48:13 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+# ** Warning: (vsim-3008) C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv(100): [CNNODP] - Component name (PC) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /TopLevel_tb19 File: C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# ** Error: (vsim-3043) C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv(100): Unresolved reference to 'PC' in DUT.PC.
+#    Time: 0 ps  Iteration: 0  Instance: /TopLevel_tb19 File: C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Error loading design
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:50:49 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# 
+# Top level modules:
+# 	TopLevel_tb19
+# End time: 18:50:49 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 18:51:00 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/ham_max
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/start
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/DUT/CLK
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/DUT/ProgramCounter1/pc_out
+run -all
+# 4
+# 5+++
+# 6
+#         128  00100100
+#         129  10000001
+#         130  00001001
+#         131  01100011
+#         132  00001101
+#         133  10001101
+#         134  01100101
+#         135  00010010
+#         136  00000001
+#         137  00001101
+#         138  01110110
+#         139  00111101
+#         140  11101101
+#         141  10001100
+#         142  11111001
+#         143  11000110
+#         144  11000101
+#         145  10101010
+#         146  11100101
+#         147  01110111
+# 7
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[2]}
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 20:47:27 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/start
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/DUT/ProgramCounter1/pc_out
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[1]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[2]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[3]}
+run -all
+# 4
+# 5+++
+# 6
+#         128  00100100
+#         129  10000001
+#         130  00001001
+#         131  01100011
+#         132  00001101
+#         133  10001101
+#         134  01100101
+#         135  00010010
+#         136  00000001
+#         137  00001101
+#         138  01110110
+#         139  00111101
+#         140  11101101
+#         141  10001100
+#         142  11111001
+#         143  11000110
+#         144  11000101
+#         145  10101010
+#         146  11100101
+#         147  01110111
+# 7
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:04:16 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# 
+# Top level modules:
+# 	TopLevel_tb19
+# End time: 21:04:16 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 21:04:33 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+run -all
+# 4
+# 5+++
+# 6
+#         128  00100100
+#         129  10000001
+#         130  00001001
+#         131  01100011
+#         132  00001101
+#         133  10001101
+#         134  01100101
+#         135  00010010
+#         136  00000001
+#         137  00001101
+#         138  01110110
+#         139  00111101
+#         140  11101101
+#         141  10001100
+#         142  11111001
+#         143  11000110
+#         144  11000101
+#         145  10101010
+#         146  11100101
+#         147  01110111
+# 7
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 21:07:02 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/start \
+sim:/TopLevel_tb19/CLK \
+sim:/TopLevel_tb19/halt
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/DUT/ProgramCounter1/pc_out
+run -all
+# 4
+# 5+++
+# 6
+#         128  00100100
+#         129  10000001
+#         130  00001001
+#         131  01100011
+#         132  00001101
+#         133  10001101
+#         134  01100101
+#         135  00010010
+#         136  00000001
+#         137  00001101
+#         138  01110110
+#         139  00111101
+#         140  11101101
+#         141  10001100
+#         142  11111001
+#         143  11000110
+#         144  11000101
+#         145  10101010
+#         146  11100101
+#         147  01110111
+# 7
+# 8
+# 9
+#   4  4  4  3  4  2  4  3  3  3  3  4  3  6  4  4  4  3  4 
+#   2  4  3  2  4  4  1  3  7  5  4  3  4  4  2  4  3  6 
+#   4  1  2  4  4  1  1  7  3  4  3  4  6  4  4  5  6 
+#   5  6  2  4  3  5  3  5  4  7  4  4  4  4  3  2 
+#   1  3  5  2  0  6  2  3  2  5  5  3  5  4  5 
+#   4  6  3  1  7  3  2  1  4  4  2  4  3  6 
+#   6  3  3  3  3  2  5  4  4  2  6  1  2 
+#   3  5  3  5  8  5  6  4  6  4  7  4 
+#   2  6  4  5  4  5  5  3  5  4  5 
+#   6  2  3  2  5  5  3  5  4  5 
+#   4  5  6  5  3  5  5  4  1 
+#   3  4  3  7  5  5  4  3 
+#   3  2  4  2  4  1  4 
+#   5  3  3  3  4  7 
+#   6  4  4  3  4 
+#   2  4  3  4 
+#   6  1  4 
+#   5  6 
+#   3 
+#  
+# 10
+# testbench max:  8 135 140
+# DUT       max:   0
+# cycle count =          95
+# instruction =          97              1180000
+# ** Note: $stop    : C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv(101)
+#    Time: 1190 ns  Iteration: 0  Instance: /TopLevel_tb19
+# Break in Module TopLevel_tb19 at C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv line 101
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 21:16:51 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/start \
+sim:/TopLevel_tb19/CLK
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/DUT/ProgramCounter1/pc_out
+run -all
+# 4
+# 5+++
+# 6
+#         128  00100100
+#         129  10000001
+#         130  00001001
+#         131  01100011
+#         132  00001101
+#         133  10001101
+#         134  01100101
+#         135  00010010
+#         136  00000001
+#         137  00001101
+#         138  01110110
+#         139  00111101
+#         140  11101101
+#         141  10001100
+#         142  11111001
+#         143  11000110
+#         144  11000101
+#         145  10101010
+#         146  11100101
+#         147  01110111
+# 7
+# 8
+# 9
+#   4  4  4  3  4  2  4  3  3  3  3  4  3  6  4  4  4  3  4 
+#   2  4  3  2  4  4  1  3  7  5  4  3  4  4  2  4  3  6 
+#   4  1  2  4  4  1  1  7  3  4  3  4  6  4  4  5  6 
+#   5  6  2  4  3  5  3  5  4  7  4  4  4  4  3  2 
+#   1  3  5  2  0  6  2  3  2  5  5  3  5  4  5 
+#   4  6  3  1  7  3  2  1  4  4  2  4  3  6 
+#   6  3  3  3  3  2  5  4  4  2  6  1  2 
+#   3  5  3  5  8  5  6  4  6  4  7  4 
+#   2  6  4  5  4  5  5  3  5  4  5 
+#   6  2  3  2  5  5  3  5  4  5 
+#   4  5  6  5  3  5  5  4  1 
+#   3  4  3  7  5  5  4  3 
+#   3  2  4  2  4  1  4 
+#   5  3  3  3  4  7 
+#   6  4  4  3  4 
+#   2  4  3  4 
+#   6  1  4 
+#   5  6 
+#   3 
+#  
+# 10
+# testbench max:  8 135 140
+# DUT       max:   4
+# cycle count =          96
+# instruction =          98              1190000
+# ** Note: $stop    : C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv(101)
+#    Time: 1200 ns  Iteration: 0  Instance: /TopLevel_tb19
+# Break in Module TopLevel_tb19 at C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv line 101
+run -all
+vsim work.TopLevel_tb19
+# vsim work.TopLevel_tb19 
+# Start time: 21:20:17 on Mar 22,2017
+# Loading sv_std.std
+# Loading work.TopLevel_tb19
+# Loading work.TopLevel
+# Loading work.pc_exam
+# Loading work.instr_ROM
+# Loading work.definitions
+# Loading work.reg_file_sv_unit
+# Loading work.reg_file
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.dataMem
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/start \
+sim:/TopLevel_tb19/CLK
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/DUT/ProgramCounter1/pc_out
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[6]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[2]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/memory1/MEM[127]}
+run -all
+# 4
+# 5+++
+# 6
+#         128  00100100
+#         129  10000001
+#         130  00001001
+#         131  01100011
+#         132  00001101
+#         133  10001101
+#         134  01100101
+#         135  00010010
+#         136  00000001
+#         137  00001101
+#         138  01110110
+#         139  00111101
+#         140  11101101
+#         141  10001100
+#         142  11111001
+#         143  11000110
+#         144  11000101
+#         145  10101010
+#         146  11100101
+#         147  01110111
+# 7
+# 8
+# 9
+#   4  4  4  3  4  2  4  3  3  3  3  4  3  6  4  4  4  3  4 
+#   2  4  3  2  4  4  1  3  7  5  4  3  4  4  2  4  3  6 
+#   4  1  2  4  4  1  1  7  3  4  3  4  6  4  4  5  6 
+#   5  6  2  4  3  5  3  5  4  7  4  4  4  4  3  2 
+#   1  3  5  2  0  6  2  3  2  5  5  3  5  4  5 
+#   4  6  3  1  7  3  2  1  4  4  2  4  3  6 
+#   6  3  3  3  3  2  5  4  4  2  6  1  2 
+#   3  5  3  5  8  5  6  4  6  4  7  4 
+#   2  6  4  5  4  5  5  3  5  4  5 
+#   6  2  3  2  5  5  3  5  4  5 
+#   4  5  6  5  3  5  5  4  1 
+#   3  4  3  7  5  5  4  3 
+#   3  2  4  2  4  1  4 
+#   5  3  3  3  4  7 
+#   6  4  4  3  4 
+#   2  4  3  4 
+#   6  1  4 
+#   5  6 
+#   3 
+#  
+# 10
+# testbench max:  8 135 140
+# DUT       max:   4
+# cycle count =          96
+# instruction =          98              1190000
+# ** Note: $stop    : C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv(101)
+#    Time: 1200 ns  Iteration: 0  Instance: /TopLevel_tb19
+# Break in Module TopLevel_tb19 at C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv line 101
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/memory1/MEM[1]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/memory1/MEM[3]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[3]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[1]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[7]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[5]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[15]}
+add wave -position insertpoint  \
+sim:/TopLevel_tb19/DUT/ALU1/INPUT_A \
+sim:/TopLevel_tb19/DUT/ALU1/INPUT_B
+restart
+run -all
+# 4
+# 5+++
+# 6
+#         128  00100100
+#         129  10000001
+#         130  00001001
+#         131  01100011
+#         132  00001101
+#         133  10001101
+#         134  01100101
+#         135  00010010
+#         136  00000001
+#         137  00001101
+#         138  01110110
+#         139  00111101
+#         140  11101101
+#         141  10001100
+#         142  11111001
+#         143  11000110
+#         144  11000101
+#         145  10101010
+#         146  11100101
+#         147  01110111
+# 7
+# 8
+# 9
+#   4  4  4  3  4  2  4  3  3  3  3  4  3  6  4  4  4  3  4 
+#   2  4  3  2  4  4  1  3  7  5  4  3  4  4  2  4  3  6 
+#   4  1  2  4  4  1  1  7  3  4  3  4  6  4  4  5  6 
+#   5  6  2  4  3  5  3  5  4  7  4  4  4  4  3  2 
+#   1  3  5  2  0  6  2  3  2  5  5  3  5  4  5 
+#   4  6  3  1  7  3  2  1  4  4  2  4  3  6 
+#   6  3  3  3  3  2  5  4  4  2  6  1  2 
+#   3  5  3  5  8  5  6  4  6  4  7  4 
+#   2  6  4  5  4  5  5  3  5  4  5 
+#   6  2  3  2  5  5  3  5  4  5 
+#   4  5  6  5  3  5  5  4  1 
+#   3  4  3  7  5  5  4  3 
+#   3  2  4  2  4  1  4 
+#   5  3  3  3  4  7 
+#   6  4  4  3  4 
+#   2  4  3  4 
+#   6  1  4 
+#   5  6 
+#   3 
+#  
+# 10
+# testbench max:  8 135 140
+# DUT       max:   4
+# cycle count =          96
+# instruction =          98              1190000
+# ** Note: $stop    : C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv(101)
+#    Time: 1200 ns  Iteration: 0  Instance: /TopLevel_tb19
+# Break in Module TopLevel_tb19 at C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv line 101
+vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:09:04 on Mar 22,2017
+# vlog -reportprogress 300 -work work C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv 
+# -- Compiling module TopLevel_tb19
+# 
+# Top level modules:
+# 	TopLevel_tb19
+# End time: 22:09:04 on Mar 22,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Load canceled
+restart
+# Loading work.TopLevel_tb19
+run -all
+# 4
+# 5+++
+# 6
+#         128  00100100
+#         129  10000001
+#         130  00001001
+#         131  01100011
+#         132  00001101
+#         133  10001101
+#         134  01100101
+#         135  00010010
+#         136  00000001
+#         137  00001101
+#         138  01110110
+#         139  00111101
+#         140  11101101
+#         141  10001100
+#         142  11111001
+#         143  11000110
+#         144  11000101
+#         145  10101010
+#         146  11100101
+#         147  01110111
+# 7
+restart
+run -all
+# 4
+# 5+++
+# 6
+#         128  00100100
+#         129  10000001
+#         130  00001001
+#         131  01100011
+#         132  00001101
+#         133  10001101
+#         134  01100101
+#         135  00010010
+#         136  00000001
+#         137  00001101
+#         138  01110110
+#         139  00111101
+#         140  11101101
+#         141  10001100
+#         142  11111001
+#         143  11000110
+#         144  11000101
+#         145  10101010
+#         146  11100101
+#         147  01110111
+# 7
+# 8
+# 9
+#   4  4  4  3  4  2  4  3  3  3  3  4  3  6  4  4  4  3  4 
+#   2  4  3  2  4  4  1  3  7  5  4  3  4  4  2  4  3  6 
+#   4  1  2  4  4  1  1  7  3  4  3  4  6  4  4  5  6 
+#   5  6  2  4  3  5  3  5  4  7  4  4  4  4  3  2 
+#   1  3  5  2  0  6  2  3  2  5  5  3  5  4  5 
+#   4  6  3  1  7  3  2  1  4  4  2  4  3  6 
+#   6  3  3  3  3  2  5  4  4  2  6  1  2 
+#   3  5  3  5  8  5  6  4  6  4  7  4 
+#   2  6  4  5  4  5  5  3  5  4  5 
+#   6  2  3  2  5  5  3  5  4  5 
+#   4  5  6  5  3  5  5  4  1 
+#   3  4  3  7  5  5  4  3 
+#   3  2  4  2  4  1  4 
+#   5  3  3  3  4  7 
+#   6  4  4  3  4 
+#   2  4  3  4 
+#   6  1  4 
+#   5  6 
+#   3 
+#  
+# 10
+# testbench max:  8 135 140
+# DUT       max:   8
+# cycle count =       15882
+# instruction =       15884            159050000
+# ** Note: $stop    : C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv(101)
+#    Time: 159060 ns  Iteration: 0  Instance: /TopLevel_tb19
+# Break in Module TopLevel_tb19 at C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel_tb19.sv line 101
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/memory1/MEM[4]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/memory1/MEM[4]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[4]}
+add wave -position insertpoint  \
+{sim:/TopLevel_tb19/DUT/REG_FILE1/registers[0]}
+# End time: 02:04:27 on Mar 23,2017, Elapsed time: 4:44:10
+# Errors: 1, Warnings: 0

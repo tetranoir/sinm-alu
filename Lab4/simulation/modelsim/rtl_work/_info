@@ -1,0 +1,241 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/simulation/modelsim
+vALU
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 DXx4 work 11 definitions 0 22 oYGYAEloX<0MR0ialB>6I3
+DXx4 work 11 ALU_sv_unit 0 22 @o`f^AkBhjH:ja2abm_C80
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 SG[5z7[1ZlXa7n>7MJmKG1
+IEOGJQdl2R50[O5LVjfd@h0
+!s105 ALU_sv_unit
+S1
+R0
+Z4 w1490148847
+Z5 8C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv
+Z6 FC:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv
+L0 5
+Z7 OV;L;10.5b;63
+Z8 !s108 1490224095.000000
+Z9 !s107 C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv|
+Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4|C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/ALU.sv|
+!i113 1
+Z11 o-sv -work work
+Z12 !s92 -sv -work work +incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4
+Z13 tCvgOpt 0
+n@a@l@u
+XALU_sv_unit
+R1
+R2
+V@o`f^AkBhjH:ja2abm_C80
+r1
+!s85 0
+31
+!i10b 1
+!s100 ;B8hbKJBH8f5W7n6fSjHN0
+I@o`f^AkBhjH:ja2abm_C80
+!i103 1
+S1
+R0
+R4
+R5
+R6
+L0 1
+R7
+R8
+R9
+R10
+!i113 1
+R11
+R12
+R13
+n@a@l@u_sv_unit
+vdataMem
+R1
+Z14 !s110 1490224095
+!i10b 1
+!s100 _0=DVMhdJLd^HLech^UO;2
+IDKPfYc`RBSg`b;mn1em3c2
+R3
+!s105 dataMem_sv_unit
+S1
+R0
+R4
+8C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv
+FC:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4|C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/dataMem.sv|
+!i113 1
+R11
+R12
+R13
+ndata@mem
+Xdefinitions
+R1
+R14
+!i10b 1
+!s100 ^CHhKe0IQmC:]ATQZ>dS[0
+IoYGYAEloX<0MR0ialB>6I3
+VoYGYAEloX<0MR0ialB>6I3
+S1
+R0
+R4
+8C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv
+FC:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv
+L0 2
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4|C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/definitions.sv|
+!i113 1
+R11
+R12
+R13
+vinstr_ROM
+R1
+R14
+!i10b 1
+!s100 Y6Vz?5Y?VVgNa_lW2zPbG1
+I6CLI^h>;18?:T_ChXG`0b0
+R3
+!s105 instr_ROM_sv_unit
+S1
+R0
+R4
+8C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv
+FC:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4|C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/instr_ROM.sv|
+!i113 1
+R11
+R12
+R13
+ninstr_@r@o@m
+vpc_exam
+R1
+R14
+!i10b 1
+!s100 OO=fNTLa:?fPTCSBQBKXF2
+Ioh;6@L_n^TdMaHRfh`:6i0
+R3
+!s105 pc_exam_sv_unit
+S1
+R0
+R4
+8C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv
+FC:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv
+L0 2
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4|C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/pc_exam.sv|
+!i113 1
+R11
+R12
+R13
+vreg_file
+R1
+R2
+DXx4 work 16 reg_file_sv_unit 0 22 Rj4liDBOJhZmL72L1ca_]0
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 jlhZ0OR<e`07o^GlMjE6b0
+I8Oj^kb6T4U<gNJ^PKkPo30
+!s105 reg_file_sv_unit
+S1
+R0
+R4
+Z15 8C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv
+Z16 FC:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv
+L0 18
+R7
+R8
+Z17 !s107 C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv|
+Z18 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4|C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/reg_file.sv|
+!i113 1
+R11
+R12
+R13
+Xreg_file_sv_unit
+R1
+R2
+VRj4liDBOJhZmL72L1ca_]0
+r1
+!s85 0
+31
+!i10b 1
+!s100 eWT3U2^Dn`0^mAPczg_oj1
+IRj4liDBOJhZmL72L1ca_]0
+!i103 1
+S1
+R0
+R4
+R15
+R16
+L0 17
+R7
+R8
+R17
+R18
+!i113 1
+R11
+R12
+R13
+vTopLevel
+R1
+R14
+!i10b 1
+!s100 @acUhkCo0DNk@WkDM638e2
+I[_kK:I[7`DXLFmVacUFIT1
+R3
+!s105 TopLevel2_sv_unit
+S1
+R0
+R4
+8C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv
+FC:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4|C:/Users/tetranoir/Desktop/class/cse141l/sinm-alu/Lab4/TopLevel2.sv|
+!i113 1
+R11
+R12
+R13
+n@top@level
